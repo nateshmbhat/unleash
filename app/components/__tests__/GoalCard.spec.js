@@ -10,7 +10,7 @@ describe('Goal Card', () => {
   let component;
   let goalData;
 
-  beforeEach(() => {
+  function renderComponent(props) {
     goalData = generate('goal')[0];
     const context = {
       muiTheme: getMuiTheme()
@@ -20,14 +20,15 @@ describe('Goal Card', () => {
     };
 
     component = mount(
-      <GoalCard goal={goalData} />,
+      <GoalCard goal={goalData} {...props} />,
       {
         context,
         childContextTypes
       });
-  });
+  }
 
   it('should render without problems', () => {
+    renderComponent();
     expect(component).to.exist;
   });
 
@@ -35,8 +36,9 @@ describe('Goal Card', () => {
     expect(component.find('Paper')).to.exist;
   });
 
-  describe('description dialog', () => {
+  describe('show GoalsModal', () => {
     it('should toggle dialog state when touchTap event is fired', () => {
+      renderComponent();
       const childComponent = component.find('Paper');
       expect(component.state().dialog).not.to.exist;
       childComponent.props().onTouchTap();
@@ -44,10 +46,51 @@ describe('Goal Card', () => {
     });
 
     it('should render a dialog when dialog state is true', () => {
+      renderComponent();
       const childComponent = component.find('Paper');
-      expect(component.find('Dialog').props().open).to.be.false;
+      expect(component.find('GoalsModal').props().parameters.showModal).to.be.false;
       childComponent.props().onTouchTap();
-      expect(component.find('Dialog').props().open).to.be.true;
+      expect(component.find('GoalsModal').props().parameters.showModal).to.be.true;
+    });
+
+    it('should create only close action when Goal is not editable', () => {
+      renderComponent();
+      const modalActions = component.find('GoalsModal').props().modalActions;
+      expect(modalActions.length).to.equal(1);
+      expect(modalActions[0].props.label).to.equal('Close');
+    });
+
+    it('should not pass path params to Dialog when Goal is not users', () => {
+      renderComponent();
+      expect(component.find('GoalsModal').props().parameters.paths).not.to.be.ok;
+      expect(component.find('GoalsModal').props().parameters.path).not.to.be.ok;
+    });
+
+    it('should not generate NotifySlack field when Goal is not users', () => {
+      renderComponent();
+      expect(component.find('GoalsModal').props().extraFields).not.to.equal([]);
+    });
+
+    it('should create Remove action when Goal is editable', () => {
+      renderComponent({ editable: true });
+      const modalActions = component.find('GoalsModal').props().modalActions;
+      expect(modalActions.length).to.equal(2);
+      expect(modalActions[0].props.label).to.equal('Remove');
+      expect(modalActions[1].props.label).to.equal('Close');
+    });
+
+    it('should create Mark as achieved action when Goal is users', () => {
+      renderComponent({ usersGoal: true, path: { id: 7 } });
+      const modalActions = component.find('GoalsModal').props().modalActions;
+      expect(modalActions.length).to.equal(2);
+      expect(modalActions[0].props.label).to.equal('Mark as achieved');
+      expect(modalActions[1].props.label).to.equal('Close');
+    });
+
+    it('should pass NotifyOnSlack field when Goal is users', () => {
+      renderComponent({ usersGoal: true, path: { id: 7 } });
+      const extraFields = component.find('GoalsModal').props().extraFields;
+      expect(extraFields.length).to.equal(1);
     });
   });
 });
