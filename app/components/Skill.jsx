@@ -54,12 +54,12 @@ function loadVotes(props, skillId, resources) {
 function loadResources(props, skills) {
   const { actions, params } = props;
   const skill = getSkillBySlug(skills, params.slug);
-  actions.resourceList(skill.id).then((resourceAction) => { loadVotes(props, skill.id, resourceAction.resources); });
+  actions.resourceList(skill.id).then(resourceAction => loadVotes(props, skill.id, resourceAction.resources));
 }
 
 function loadData(props) {
   const { actions, params } = props;
-  actions.skillList().then((action) => { loadResources(props, action.skills); });
+  actions.skillList().then(action => loadResources(props, action.skills));
   actions.profileList();
   actions.profileListBySkill(params.slug);
 }

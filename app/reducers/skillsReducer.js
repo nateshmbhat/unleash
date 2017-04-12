@@ -1,4 +1,3 @@
-import each from 'lodash/each';
 import { SKILL } from '../actions/SkillActions';
 
 const initialState = {
@@ -15,12 +14,7 @@ const initialState = {
 };
 
 function updateVotes(votes, resourceId, vote) {
-  let existingVoteIndex = -1;
-  each(votes[resourceId], (existingVote, index) => {
-    if (existingVote.authorId === vote.authorId) {
-      existingVoteIndex = index;
-    }
-  });
+  const existingVoteIndex = votes[resourceId].findIndex(existingVote => existingVote.authorId === vote.authorId);
 
   if (existingVoteIndex !== -1) {
     votes[resourceId].splice(existingVoteIndex, 1);
