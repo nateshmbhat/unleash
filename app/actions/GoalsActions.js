@@ -22,7 +22,7 @@ export const GOALS = {
   },
 };
 
-export function showAddGoalsModal(showModal) {
+export function showGoalsModal(showModal) {
   return {
     type: GOALS.ADD.SHOW_MODAL,
     showModal,

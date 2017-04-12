@@ -23,9 +23,22 @@ class Goals extends Component {
     return map(goals, goal => <GoalCard key={goal.id} goal={goal} />);
   }
 
+  renderAddGoalModal() {
+    const { actions, addModalParameters } = this.props;
+
+    return (
+      <AddGoalsModal
+        parameters={addModalParameters}
+        tagsOptions={this.getTags()}
+        onSubmit={() => actions.addGoalRequest()}
+        onCancel={() => actions.resetGoalModal()}
+        onFieldChange={(field, value) => actions.updateAddGoalsField(field, value)}
+      />
+    );
+  }
+
   render() {
-    const { list, actions, addModalParameters } = this.props;
-    const tags = this.getTags();
+    const { list, actions } = this.props;
     return (
       <div>
         <div style={styles.goalsWrapper}>
@@ -33,16 +46,11 @@ class Goals extends Component {
         </div>
         <FloatingActionButton
           style={styles.addButton}
-          onClick={() => actions.showAddGoalsModal(true)}
+          onClick={() => actions.showGoalsModal(true)}
         >
           <ContentAdd />
         </FloatingActionButton>
-        <AddGoalsModal
-          parameters={addModalParameters}
-          actions={actions}
-          tagsOptions={tags}
-          onSubmit={actions.addGoalRequest}
-        />
+        {this.renderAddGoalModal()}
       </div>
     );
   }
@@ -51,18 +59,21 @@ class Goals extends Component {
 Goals.propTypes = {
   actions: React.PropTypes.shape({
     fetchGoals: React.PropTypes.func.isRequired,
-    showAddGoalsModal: React.PropTypes.func.isRequired,
+    showGoalsModal: React.PropTypes.func.isRequired,
     addGoalRequest: React.PropTypes.func.isRequired,
   }).isRequired,
   list: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   addModalParameters: React.PropTypes.shape({
-    showModal: React.PropTypes.bool,
+    showModal: React.PropTypes.bool.isRequired,
     showSpinner: React.PropTypes.bool,
     name: React.PropTypes.string,
     description: React.PropTypes.string,
     tags: React.PropTypes.array,
     icon: React.PropTypes.string,
-    level: React.PropTypes.string,
+    level: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+    ]),
   }).isRequired,
 };
 
