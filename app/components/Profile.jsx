@@ -35,6 +35,35 @@ class Profile extends Component {
     }
   }
 
+  handleSubmit() {
+    const { actions, addModalParameters: { path }, paths: { list: [{ id }] } } = this.props;
+
+    if (!path) {
+      actions.updateAddGoalsField('path', id);
+    }
+
+    actions.addGoalToPathRequest().then(() => actions.resetGoalModal());
+  }
+
+  renderAddGoalModal() {
+    const { addModalParameters, actions, paths } = this.props;
+    const parameters = {
+      ...addModalParameters,
+      paths: paths.list,
+    };
+
+    return (
+      <AddGoalsModal
+        parameters={parameters}
+        onFieldChange={(field, value) => actions.updateAddGoalsField(field, value)}
+        onSubmit={() => this.handleSubmit()}
+        onCancel={() => actions.resetGoalModal()}
+        usersGoal
+        editable
+      />
+    );
+  }
+
   render() {
     const {
       actions,
@@ -43,7 +72,6 @@ class Profile extends Component {
       goals,
       profiles,
       loggedInUser,
-      addModalParameters,
       addExistingGoalsModalParameters,
       isLoading,
     } = this.props;
@@ -54,14 +82,13 @@ class Profile extends Component {
       { name: 'mongoDB', id: 'c390be96-168b-4f42-a0cd-933fbc46e249' },
       { name: 'React', id: 'c390be96-168b-4f42-a0cd-933fbc46e240' },
     ];
-    const tags = [];
     let addGoalButton = null;
     if (editable) {
       addGoalButton = (
         <div>
           <FloatingActionButton
             style={styles.addCustomButton}
-            onClick={() => actions.showAddGoalsModal(true)}
+            onClick={() => actions.showGoalsModal(true)}
           >
             <ContentAdd />
           </FloatingActionButton>
@@ -78,18 +105,10 @@ class Profile extends Component {
           >
             <ContentPaste />
           </FloatingActionButton>
-          <AddGoalsModal
-            parameters={addModalParameters}
-            actions={actions}
-            tagsOptions={tags}
-            onSubmit={actions.addGoalToPathRequest}
-            withPath
-          />
+          { this.renderAddGoalModal() }
         </div>
       );
     }
-
-    addModalParameters.paths = paths.list;
 
     return (
       <Loading loading={isLoading}>
@@ -138,13 +157,16 @@ Profile.propTypes = {
     id: React.PropTypes.string.isRequired,
   }).isRequired,
   addModalParameters: React.PropTypes.shape({
-    showModal: React.PropTypes.bool,
+    showModal: React.PropTypes.bool.isRequired,
     showSpinner: React.PropTypes.bool,
     name: React.PropTypes.string,
     description: React.PropTypes.string,
     tags: React.PropTypes.array,
     icon: React.PropTypes.string,
-    level: React.PropTypes.string,
+    level: React.PropTypes.oneOfType([
+      React.PropTypes.string,
+      React.PropTypes.number,
+    ]),
   }).isRequired,
   goals: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
   addExistingGoalsModalParameters: React.PropTypes.shape({

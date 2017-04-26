@@ -50,6 +50,11 @@ export const PATHS = {
     SUCCESS: 'REMOVE_PATHS_GOAL_SUCCESS',
     FAILURE: 'REMOVE_PATHS_GOAL_FAILURE',
   },
+  MOVE_GOAL: {
+    START: 'MOVE_PATHS_GOAL_START',
+    SUCCESS: 'MOVE_PATHS_GOAL_SUCCESS',
+    FAILURE: 'MOVE_PATHS_GOAL_FAILURE',
+  },
 };
 
 export function pathsList(userId) {
@@ -127,8 +132,7 @@ export function pathsUpdateGoal(path, goal, data, slackOptions = {}) {
           };
 
           slackService.notifyAchieved(notificationParameters)
-            .catch((error) => {
-              console.log('Slack notification error', error);
+            .catch(() => {
               dispatch(addNotification('There was a problem with the slack notification'));
             });
         }
@@ -180,6 +184,23 @@ export function addGoalToPathRequest() {
       })
       .catch(() => {
         dispatch({ type: PATHS.ADD_GOAL.FAILURE });
+        dispatch(addNotification('Sorry, something bad happen...'));
+      });
+  };
+}
+
+export function moveGoalToPath(goal, path, userId, newPath) {
+  return (dispatch) => {
+    dispatch({ type: PATHS.MOVE_GOAL.START });
+
+    return httpClient.delete(`${config.paths_api_url}/${path.id}/goals/${goal.id}`)
+      .then(() => httpClient.post(`${config.paths_api_url}/${newPath.id}/goals`, goal))
+      .then(() => {
+        dispatch({ type: PATHS.MOVE_GOAL.SUCCESS });
+        return dispatch(pathsList(userId));
+      })
+      .catch(() => {
+        dispatch({ type: PATHS.MOVE_GOAL.FAILURE });
         dispatch(addNotification('Sorry, something bad happen...'));
       });
   };

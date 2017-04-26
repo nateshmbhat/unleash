@@ -26,18 +26,18 @@ describe('Goals List', () => {
   let fetchGoalsSpy;
   let routerSpy;
   let addGoalRequestSpy;
-  let showAddGoalsModalSpy;
+  let showGoalsModalSpy;
   let onSubmit;
 
   beforeEach(() => {
     fetchGoalsSpy = sinon.spy();
     routerSpy = sinon.spy();
-    showAddGoalsModalSpy = sinon.spy();
+    showGoalsModalSpy = sinon.spy();
     addGoalRequestSpy = sinon.spy();
     onSubmit = sinon.spy();
     mockedActions = {
       fetchGoals: fetchGoalsSpy,
-      showAddGoalsModal: showAddGoalsModalSpy,
+      showGoalsModal: showGoalsModalSpy,
       addGoalRequest: addGoalRequestSpy
     };
     const context = {
@@ -78,11 +78,11 @@ describe('Goals List', () => {
     expect(addButton.length).to.equal(1);
   });
 
-  it('should call the showAddGoalsModal action when we click the add button and send `showModal`' +
+  it('should call the showGoalsModal action when we click the add button and send `showModal`' +
     ' parameter true', () => {
     const addButton = component.find('FloatingActionButton');
     addButton.props().onClick();
-    expect(showAddGoalsModalSpy.callCount).to.equal(1);
-    expect(showAddGoalsModalSpy.getCall(0).args[0]).to.equal(true);
+    expect(showGoalsModalSpy.callCount).to.equal(1);
+    expect(showGoalsModalSpy.getCall(0).args[0]).to.equal(true);
   });
 });
