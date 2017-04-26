@@ -65,7 +65,7 @@ class GoalCard extends Component {
     // const notifyOnSlack = this.props.getToggleState(NOTIFY_ON_SLACK);
     const notifyOnSlack = true;
     const slackOptions = {
-      notifyOnSlack: notifyOnSlack,
+      notifyOnSlack,
       additionalMessage: this.state.slackAdditionalMessage,
       profile,
     };
