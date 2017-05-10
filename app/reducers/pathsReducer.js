@@ -37,7 +37,7 @@ function removePath(pathsList, pathId) {
 const initialState = {
   isLoading: false,
   list: [],
-  goals: [],
+  goals: {},
 };
 
 function pathsReducer(state = initialState, action) {
@@ -71,6 +71,31 @@ function pathsReducer(state = initialState, action) {
       return { ...state, errors, isLoading: false, list: removePath(state.list, action.pathId) };
     case PATHS.REMOVE.FAILURE:
       return { ...state, errors, isLoading: false };
+    case PATHS.FETCH_GOALS.START:
+      return {
+        ...state,
+        goals: {
+          ...state.goals,
+          [action.pathId]: [],
+        },
+      };
+    case PATHS.FETCH_GOALS.SUCCESS:
+      return {
+        ...state,
+        goals: {
+          ...state.goals,
+          [action.pathId]: action.goals,
+        },
+      };
+    case PATHS.FETCH_GOALS.FAILURE:
+      return {
+        ...state,
+        errors,
+        goals: {
+          ...state.goals,
+          [action.pathId]: [],
+        },
+      };
     case PATHS.UPDATE_GOAL.START:
       goals = cloneDeep(state.goals);
       goals.push(goal);

@@ -1,104 +1,61 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import map from 'lodash/map';
-import some from 'lodash/some';
-import RaisedButton from 'material-ui/RaisedButton';
+import * as PathsActions from '../actions/PathsActions';
 import GoalCard from './GoalCard';
 import PathHeader from './PathHeader';
-import Loading from './Loading';
 
 let styles = {};
 
-class Paths extends Component {
-
-  handleCreatePath() {
-    const { actions, profile } = this.props;
-    actions.pathsCreate(profile.id);
+class Path extends Component {
+  componentWillMount() {
+    const { actions, path } = this.props;
+    actions.pathGoalsList(path.userId, path.id);
   }
 
-  renderGoals(path) {
-    const { actions, paths, editable, profile } = this.props;
-
-    return map(path.goals, (goal) => {
-      const loading = some(paths.goals, { id: goal.id, path: { id: path.id } });
-      return (
-        <GoalCard
-          key={goal.id}
-          goal={goal}
-          path={path}
-          actions={actions}
-          loading={loading}
-          editable={editable}
-          profile={profile}
-          paths={paths.list}
-          usersGoal
-        />
-      );
-    });
-  }
-
-  renderPath(path) {
-    const { actions, editable } = this.props;
+  render() {
+    const { actions, path, editable, paths, profiles } = this.props;
 
     return (
       <div key={path.id}>
         <PathHeader path={path} actions={actions} showActions={editable} />
         <div style={styles.pathsWrapper}>
-          {this.renderGoals(path)}
+          {map(paths.goals[path.id], goal => (
+            <GoalCard
+              key={goal.id}
+              goal={goal}
+              path={path}
+              actions={actions}
+              editable={editable}
+              paths={paths.list}
+              profile={profiles.profile}
+              usersGoal
+            />
+          ))}
         </div>
-      </div>
-    );
-  }
-
-  renderCreateAPathButton() {
-    const { editable } = this.props;
-
-    let createAPathButton = null;
-    if (editable) {
-      createAPathButton = (
-        <RaisedButton
-          label="Create A Path"
-          backgroundColor="#8FD694"
-          labelColor="#FFFFFF"
-          onTouchTap={() => this.handleCreatePath()}
-          style={styles.addPathButton}
-        />
-      );
-    }
-
-    return createAPathButton;
-  }
-
-  render() {
-    const { paths } = this.props;
-
-    if (paths.isLoading) {
-      return <Loading />;
-    }
-
-    return (
-      <div>
-        {map(paths.list, path => this.renderPath(path))}
-        {this.renderCreateAPathButton()}
       </div>
     );
   }
 }
 
-Paths.propTypes = {
+Path.propTypes = {
   actions: React.PropTypes.shape({
-    pathsCreate: React.PropTypes.func,
+    pathGoalsList: React.PropTypes.func,
   }).isRequired,
-  profile: React.PropTypes.shape({
+  path: React.PropTypes.shape({
     id: React.PropTypes.string,
-    fullName: React.PropTypes.string,
-    picture: React.PropTypes.string,
+    userId: React.PropTypes.string,
+    name: React.PropTypes.string,
   }),
-  paths: React.PropTypes.shape({
-    goals: React.PropTypes.array,
-    list: React.PropTypes.array,
-    isLoading: React.PropTypes.boolean,
-  }).isRequired,
   editable: React.PropTypes.bool.isRequired,
+  profiles: React.PropTypes.shape({
+    profile: React.PropTypes.object.isRequired,
+  }).isRequired,
+  paths: React.PropTypes.shape({
+    goals: React.PropTypes.object,
+  }).isRequired,
 };
 
 styles = {
@@ -111,14 +68,25 @@ styles = {
     width: '90%',
     maxWidth: '1150px',
   },
-  addPathButton: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    margin: '20px auto 0 auto',
-    width: '40%',
-  },
 };
 
-export default Paths;
+function mapStateToProps(state) {
+  const { paths, profiles } = state;
+  return {
+    profiles,
+    paths,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators({
+      ...PathsActions,
+    }, dispatch),
+  };
+}
+
+export default withRouter(connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Path));

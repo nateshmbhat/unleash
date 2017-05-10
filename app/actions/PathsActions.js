@@ -30,6 +30,11 @@ export const PATHS = {
     SUCCESS: 'REMOVE_PATHS_SUCCESS',
     FAILURE: 'REMOVE_PATHS_FAILURE',
   },
+  FETCH_GOALS: {
+    START: 'FETCH_PATH_GOALS_START',
+    SUCCESS: 'FETCH_PATH_GOALS_SUCCESS',
+    FAILURE: 'FETCH_PATH_GOALS_FAILURE',
+  },
   UPDATE_GOAL: {
     START: 'UPDATE_PATHS_GOAL_START',
     SUCCESS: 'UPDATE_PATHS_GOAL_SUCCESS',
@@ -61,7 +66,7 @@ export function pathsList(userId) {
   return (dispatch) => {
     dispatch({ type: PATHS.FETCH.START });
 
-    return httpClient.get(`${config.paths_api_url}?userId=${userId}`)
+    return httpClient.get(`${config.paths_api_url}/${userId}`)
       .then(paths => dispatch({ type: PATHS.FETCH.SUCCESS, paths }))
       .catch(errors => dispatch({ type: PATHS.FETCH.FAILURE, errors }));
   };
@@ -94,6 +99,16 @@ export function pathsRemove(pathId) {
     return httpClient.delete(`${config.paths_api_url}/${pathId}`)
       .then(() => dispatch({ type: PATHS.REMOVE.SUCCESS, pathId }))
       .catch(errors => dispatch({ type: PATHS.REMOVE.FAILURE, errors }));
+  };
+}
+
+export function pathGoalsList(userId, pathId) {
+  return (dispatch) => {
+    dispatch({ type: PATHS.FETCH_GOALS.START, pathId });
+
+    return httpClient.get(`${config.paths_api_url}/${userId}/${pathId}/goals`)
+      .then(goals => dispatch({ type: PATHS.FETCH_GOALS.SUCCESS, pathId, goals }))
+      .catch(errors => dispatch({ type: PATHS.FETCH_GOALS.FAILURE, pathId, errors }));
   };
 }
 

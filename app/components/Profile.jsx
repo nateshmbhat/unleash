@@ -4,12 +4,11 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import { routerShape } from 'react-router/lib/PropTypes';
 import ContentPaste from 'material-ui/svg-icons/content/content-paste';
-import Path from './Path';
+import Paths from './Paths';
 import UserCard from './UserCard';
 import AddGoalsModal from './AddGoalsModal';
 import AddExistingGoalsModal from './AddExistingGoalsModal';
 import Loading from './Loading';
-import Tempo from './Tempo';
 
 let styles = {};
 
@@ -115,7 +114,6 @@ class Profile extends Component {
         <div>
           <div style={styles.userWrapper}>
             <UserCard user={profiles.profile} router={this.props.router} key={userId} />
-            <Tempo paths={paths} />
           </div>
           <div style={styles.skillsWrapper}>
             {skills.map(skill => (
@@ -124,7 +122,7 @@ class Profile extends Component {
               </Paper>
             ))}
           </div>
-          <Path
+          <Paths
             actions={actions}
             paths={paths}
             editable={editable}
