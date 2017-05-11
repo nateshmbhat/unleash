@@ -116,7 +116,7 @@ export function removeGoalFromPath(goal, path, userId) {
   return (dispatch) => {
     dispatch({ type: PATHS.REMOVE_GOAL.START });
 
-    return httpClient.delete(`${config.paths_api_url}/${path.id}/goals/${goal.id}`)
+    return httpClient.delete(`${config.paths_api_url}/${userId}/${path.id}/goals/${goal.id}`)
       .then(() => {
         dispatch({ type: PATHS.REMOVE_GOAL.SUCCESS });
         dispatch(pathsList(userId));
