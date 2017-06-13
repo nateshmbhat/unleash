@@ -115,7 +115,7 @@ class GoalCard extends Component {
   }
 
   generateModalActions() {
-    const { goal, editable, usersGoal } = this.props;
+    const { goal, editable } = this.props;
     const modalActions = [
       <FlatButton
         label="Close"
@@ -131,9 +131,6 @@ class GoalCard extends Component {
           onTouchTap={() => this.handleRemove()}
         />,
       );
-    }
-
-    if (usersGoal) {
       modalActions.unshift(
         <FlatButton
           label={goal.achieved ? 'Mark as unachieved' : 'Mark as achieved'}
