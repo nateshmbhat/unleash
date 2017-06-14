@@ -13,4 +13,4 @@ WORKDIR /var/www/unleash
 
 RUN yarn
 
-CMD npm start
+CMD npm run build
