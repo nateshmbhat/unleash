@@ -3,5 +3,6 @@ web:
   volumes:
     - .:/var/www/unleash
   working_dir: /var/www/unleash
+  command: npm start
   ports:
     - 80:3000

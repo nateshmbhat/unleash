@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node server.js",
-    "build": "NODE_ENV=production webpack -p --config ./webpack.prod.js --progress && npm start",
+    "build": "cross-env NODE_ENV=production webpack -p --config ./webpack.prod.js --progress",
     "test": "cross-env NODE_ENV=test mocha --require app/testUtils/setup.js --recursive app/**/*.spec.js",
     "test:tdd": "cross-env NODE_ENV=test mocha -w --require app/testUtils/setup.js --recursive app/**/*.spec.js",
     "test:lint": "cross-env NODE_ENV=test eslint ./app --ext .jsx --ext .js",

@@ -25,12 +25,12 @@ deploy_cluster() {
 }
 
 make_task_def() {
-  task_template='[
-    {
-      "name": "web",
+	task_template='[
+		{
+			"name": "web",
       "image": "%s.dkr.ecr.us-west-2.amazonaws.com/x-team-unleash:%s",
-      "essential": true,
-      "memoryReservation": 400,
+			"essential": true,
+			"memory": 256,
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
@@ -38,35 +38,22 @@ make_task_def() {
           "awslogs-region": "us-west-2"
         }
       },
-      "environment": [
-        { "name": "firebaseApiKey", "value": "%s" },
-        { "name": "firebaseAuthDomain", "value": "%s" },
-        { "name": "firebaseDatabaseURL", "value": "%s" },
-        { "name": "firebaseStorageBucket", "value": "%s" },
-        { "name": "firebaseMessagingSenderId", "value": "%s" },
-        { "name": "skills_api_url", "value": "%s" },
-        { "name": "goals_api_url", "value": "%s" },
-        { "name": "profiles_api_url", "value": "%s" },
-        { "name": "paths_api_url", "value": "%s" },
-        { "name": "slack_bot_url", "value": "%s" },
-        { "name": "NODE_ENV", "value": "%s" }
-      ],
-      "portMappings": [
-        {
-          "hostPort": 0,
-          "containerPort": 3000,
+			"portMappings": [
+				{
+					"hostPort": 0,
+          "containerPort": 80,
           "protocol": "tcp"
         }
-      ]
-    }
-  ]'
+			]
+		}
+	]'
 
-  task_def=$(printf "$task_template" $AWS_ACCOUNT_ID $TRAVIS_BUILD_NUMBER $FIREBASE_API_KEY $FIREBASE_AUTH_DOMAIN $FIREBASE_DATABASE_URL $FIREBASE_STORAGE_BUCKET $FIREBASE_MESSAGING_SENDER_ID $SKILLS_API_URL $GOALS_API_URL $PROFILES_API_URL $PATHS_API_URL $SLACK_BOT_URL $APP_NODE_ENV)
+	task_def=$(printf "$task_template" $AWS_ACCOUNT_ID $TRAVIS_BUILD_NUMBER-$APP_ENV)
 }
 
 push_ecr_image() {
   eval $(aws ecr get-login --region us-west-2)
-  docker push $AWS_ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/x-team-unleash:$TRAVIS_BUILD_NUMBER
+  docker push $AWS_ACCOUNT_ID.dkr.ecr.us-west-2.amazonaws.com/x-team-unleash:$TRAVIS_BUILD_NUMBER-$APP_ENV
 }
 
 register_definition() {
