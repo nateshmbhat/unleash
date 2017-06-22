@@ -1,0 +1,73 @@
+/* timeline__item__chacklist.css */
+.timeline__item__checklist {
+	list-style: none;
+	margin: 30px 0 0 20px;
+	padding: 0;
+}
+@media screen and (min-width: 768px) {
+	.timeline__item__checklist {
+		margin-left: 60px;
+		max-width: calc(100% - 120px);
+	}
+}
+
+.timeline__item__checkbox {
+	margin: 0 0 25px;
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+.timeline__item__checkbox::after {
+	position: absolute;
+	content: url(../images/three-dots.svg);
+	border-radius: 50%;
+	width: 20px;
+	height: 4px;
+	top: 0;
+	right: 0;
+}
+.timeline__item__checkbox__input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	flex: 0 0 20px;
+}
+.timeline__item__checkbox__input:checked {
+	background-color: #5fcf21;
+}
+.timeline__item__checkbox__input:checked + .timeline__item__checkbox__label {
+	text-decoration: line-through;
+	color: #b8b7bc;
+}
+
+.timeline__item__checkbox__label {
+	display: block;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 600;
+	color: #34323b;
+	padding-right: 30px;
+	margin-left: 5px;
+}
+
+.timeline__item__addnew__btn {
+	font: 14px/1 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #f33c57;
+	border: none;
+	padding: 5px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.timeline__item__addnew__btn__icon {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 22px;
+	margin-right: 4px;
+}

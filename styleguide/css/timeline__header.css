@@ -1,0 +1,72 @@
+/* timeline__header.css */
+.timeline__header {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 18px;
+	position: relative;
+}
+@media screen and (min-width: 768px) {
+	.timeline__header {
+		padding: 40px 30px;
+	}
+	.timeline__header::after {
+		display: block;
+		position: absolute;
+		left: 30px;
+		top: calc(50% - 1px);
+		content: '';
+		width: calc(100% - 60px);
+		height: 1px;
+		background-color: #e9e9e9;
+		z-index: -1;
+	}
+}
+
+.timeline__search {
+	position: relative;
+	padding-left: 16px;
+	background-color: #fff;
+	width: 8rem;
+}
+.timeline__search::before {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: calc(50% - 9px);
+	content: url(../images/icons/search.svg);
+	width: 16px;
+	height: 15px;
+}
+
+.timeline__search__input {
+	font: 14px/2 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	background-color: transparent;
+	color: #9a9d9e;
+	border: none;
+	padding: 0 11px;
+	width: 8rem;
+}
+.timeline__search__input::placeholder {
+	color: #9a9d9e;
+}
+
+.timeline__sortby {
+	background-color: #fff;
+	width: 11rem;
+	text-align: right;
+}
+.timeline__sortby__dropdown {
+	font: 14px/2 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	background-color: transparent;
+	color: #9a9d9e;
+	border: none;
+	padding: 0 11px;
+	min-width: 8rem;
+}

@@ -1,0 +1,123 @@
+/* timeline__items.css */
+
+.timeline__items {
+	list-style: none;
+	margin: 0;
+	padding: 0 18px;
+}
+@media screen and (min-width: 768px) {
+	.timeline__items {
+		padding: 0 30px;
+		margin-left: 65px;
+	}	
+}
+.timeline__item {
+	margin-top: 40px;
+	padding: 28px 18px 18px;
+	border: 1px solid #e9edee;
+	position: relative;
+}
+
+@media screen and (min-width: 768px) {
+	.timeline__item {
+		margin: 30px;
+		padding: 30px;
+	}
+	.timeline__item:first-child {
+		margin-top: 60px;
+	}
+}
+
+.timeline__item::before {
+	position: absolute;
+	content: '';
+	border-radius: 50%;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #e9edee;
+	background-color: #fff;
+	top: -12px;
+	left: calc(50% - 10px);
+}
+.timeline__item::after {
+	position: absolute;
+	content: url(../images/three-dots.svg);
+	border-radius: 50%;
+	width: 20px;
+	height: 4px;
+	top: 16px;
+	right: 18px;
+}
+
+@media screen and (min-width: 768px) {
+	.timeline__item::before {
+		left: -50px;
+		top: calc(50% - 10px);
+	}
+}
+
+.timeline__item__title {
+	font: 700 22px/1 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #34323b;
+	margin: 0;
+}
+@media screen and (max-width: 767px) {
+	.timeline__item__title {
+		max-width: 60%;
+	}
+}
+@media screen and (min-width: 768px) {
+	.timeline__item__title {
+		font-size: 24px;
+	}
+}
+
+.timeline__item__description {
+	font-size: 14px;
+	line-height: 20px;
+	color: #34323b;
+	margin: 15px 0;
+}
+
+.timeline__item__info {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.timeline__item__steps {
+	display: inline-block;
+	font: 14px 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #9a9d9e;
+}
+.timeline__item__steps__label {
+	display: inline-block;
+	margin-right: 2px;
+}
+.timeline__item__steps__bar {
+	margin: 0 -1px;
+	display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+	.timeline__item__progress {
+		display: none;
+	}
+}
+
+
+.timeline__item__switch-view {
+	display: inline-block;
+	font: 14px 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #9a9d9e;
+	background: transparent url(../images/arrow--up.svg) no-repeat center right;
+	padding: 0 20px 0 0;
+	border: none;
+	cursor: pointer;
+}

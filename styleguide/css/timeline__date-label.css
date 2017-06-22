@@ -1,0 +1,24 @@
+/* timeline__date-label */
+
+.timeline__date-label {
+	margin: 0 18px;
+	font: 14px/34px 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	color: #34323b;
+	background-color: #e1e1e1;
+}
+@media screen and (min-width: 768px) {
+	.timeline__date-label {
+		margin: 0 30px;
+		width: 115px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.timeline__date-label {
+		margin: 0;
+		position: absolute;
+		left: calc(50% - 62px);
+		margin-top: -70px;
+	}
+}
