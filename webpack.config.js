@@ -50,7 +50,8 @@ const rules = [
     use: {
       loader: 'babel-loader',
       options: {
-        presets: ["react", "es2015", "stage-0"]
+        presets: ["react", "es2015", "stage-0"],
+        "plugins": ["react-hot-loader/babel"]
       }
     }
   },
@@ -105,9 +106,13 @@ if (isProduction) {
 
 module.exports = {
   devtool: isProduction ? false : 'source-map',
-  entry: {
-    main: './app/App.jsx'
-  },
+  entry: [
+    // activate HMR for React
+    'react-hot-loader/patch',
+
+    // entry point
+    './app/index.jsx'
+  ],
   output: {
     path: buildPath,
     publicPath: '/',
