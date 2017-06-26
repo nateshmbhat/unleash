@@ -3,6 +3,7 @@ const path = require('path');
 
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ConfigPlugin = require('config-webpack-plugin');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProduction = nodeEnv === 'production';
@@ -32,6 +33,7 @@ const plugins = [
     path: buildPath,
     filename: 'index.html',
   }),
+  new ConfigPlugin(['./config.js', './config.local.js']),
 ];
 
 // Common rules
