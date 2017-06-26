@@ -1,0 +1,147 @@
+/* timeline__item__checklist.css */
+
+/* Desktop layout */
+@media screen and (min-width: 1024px) {
+	.timeline__item__info {
+		margin-left: 60px;
+	}
+}
+
+.timeline__item__checklist {
+	position: relative;
+	list-style: none;
+	margin: 30px 0 0 20px;
+	padding: 0;
+}
+@media screen and (min-width: 768px) {
+	.timeline__item__checklist {
+		margin-left: 60px;
+		max-width: calc(100% - 120px);
+	}
+}
+@media screen and (min-width: 1024px) {
+	.timeline__item__checklist {
+		margin: 0;
+		max-width: 100%;
+	}
+}
+.timeline__item__checklist:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -30px;
+	width: 2px;
+	height: calc(100% - 25px);
+	background-color: #e9edee;
+}
+
+.timeline__item__checkbox {
+	margin: 0 0 25px;
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+}
+@media screen and (min-width: 1024px) {
+	.timeline__item__checkbox {
+		max-width: calc(100% - 60px);
+	}
+}
+
+.timeline__item__checkbox::after {
+	position: absolute;
+	content: url(../images/three-dots.svg);
+	border-radius: 50%;
+	width: 20px;
+	height: 4px;
+	top: 0;
+	right: 0;
+}
+@media screen and (min-width: 1024px) {
+	.timeline__item__checkbox::after {
+		transition: opacity .3s ease-out;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.timeline__item__checkbox:hover::after {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.timeline__item__checkbox__input {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	flex: 0 0 20px;
+	position: relative;
+}
+
+/* checkbox styling */
+.timeline__item__checkbox__input::after {
+	display: inline-block;
+	content: '';
+	position: absolute;
+	left: -18px; top: -7px;
+	width: 30px;
+	height: 30px;
+	border: 2px solid #e9edee;
+	background-color: #fff;
+	transition: background-color .2s ease-out;
+}
+.timeline__item__checkbox:hover .timeline__item__checkbox__input::after,
+.timeline__item__checkbox__input:checked::after {
+	content: '✓';
+	text-align: center;
+	line-height: 30px;
+	font-size: 20px;
+	vertical-align: middle;
+}
+.timeline__item__checkbox:hover .timeline__item__checkbox__input:not(:checked)::after {
+	color: #5fcf21;
+}
+.timeline__item__checkbox__input:checked::after {
+	border-color: #5fcf21;
+	background-color: #5fcf21;
+	color: #fff;
+}
+.timeline__item__checkbox__input:checked + .timeline__item__checkbox__label {
+	text-decoration: line-through;
+	color: #b8b7bc;
+}
+
+.timeline__item__checkbox__label {
+	display: block;
+	font-size: 16px;
+	line-height: 1;
+	font-weight: 600;
+	color: #34323b;
+	padding-right: 30px;
+	margin-left: 5px;
+}
+
+
+/* add a new step button */
+.timeline__item__addnew {
+	margin-left: -8px;
+}
+.timeline__item__addnew__btn {
+	font: 14px/1 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #f33c57;
+	border: none;
+	padding: 5px;
+	background-color: transparent;
+	cursor: pointer;
+}
+.timeline__item__addnew__btn__icon {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 22px;
+	margin-right: 4px;
+}

@@ -1,17 +1,16 @@
-/* timeline__items.css */
+/* timeline__item.css */
 
-.timeline__items {
-	list-style: none;
-	margin: 0;
-	padding: 0 18px;
+@media screen and (min-width: 1024px) {
+	.timeline__item {
+		width: calc(50% - 9px);
+		align-self: flex-end;
+	}
+	.timeline__item:nth-child(even) {
+		align-self: flex-start;
+	}
 }
-@media screen and (min-width: 768px) {
-	.timeline__items {
-		padding: 0 30px;
-		margin-left: 65px;
-	}	
-}
-.timeline__item {
+
+.timeline__item__intro {
 	margin-top: 40px;
 	padding: 28px 18px 18px;
 	border: 1px solid #e9edee;
@@ -19,16 +18,16 @@
 }
 
 @media screen and (min-width: 768px) {
-	.timeline__item {
+	.timeline__item__intro {
 		margin: 30px;
 		padding: 30px;
 	}
-	.timeline__item:first-child {
+	.timeline__item__intro:first-child {
 		margin-top: 60px;
 	}
 }
 
-.timeline__item::before {
+.timeline__item__intro::before {
 	position: absolute;
 	content: '';
 	border-radius: 50%;
@@ -39,21 +38,35 @@
 	top: -12px;
 	left: calc(50% - 10px);
 }
-.timeline__item::after {
+
+@media screen and (min-width: 768px) {
+	.timeline__item__intro::before {
+		left: -50px;
+		top: calc(50% - 10px);
+	}
+}
+@media screen and (min-width: 1024px) {
+	.timeline__item:nth-child(odd) .timeline__item__intro::before {
+		left: -50px;
+		top: calc(50% - 10px);
+	}
+	.timeline__item:nth-child(even) .timeline__item__intro::before {
+		left: auto;
+		right: -52px;
+		top: calc(50% - 10px);
+	}
+}
+
+.timeline__item__intro::after {
 	position: absolute;
 	content: url(../images/three-dots.svg);
 	border-radius: 50%;
 	width: 20px;
-	height: 4px;
+	height: 20px;
 	top: 16px;
 	right: 18px;
-}
-
-@media screen and (min-width: 768px) {
-	.timeline__item::before {
-		left: -50px;
-		top: calc(50% - 10px);
-	}
+	cursor: pointer;
+	display: block;
 }
 
 .timeline__item__title {
@@ -80,13 +93,14 @@
 	margin: 15px 0;
 }
 
-.timeline__item__info {
+.timeline__item__progress {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .timeline__item__steps {
@@ -105,8 +119,42 @@
 }
 
 @media screen and (max-width: 767px) {
-	.timeline__item__progress {
+	.timeline__item__progress-bar {
 		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	.timeline__item__progress-bar {
+		flex-grow: 1;
+		margin: 0 20px;
+		height: 6px;
+		border-radius: 8px;
+		background-color: #e1e1e1;
+	}
+	progress::-webkit-progress-bar {
+		height: 6px;
+		border-radius: 8px;
+		background-color: #e1e1e1;
+	}
+	progress::-moz-progress-bar {
+		height: 6px;
+		border-radius: 8px;
+		background-color: #e1e1e1;
+	}
+	progress::-webkit-progress-value {
+		border-radius: 8px 0 0 8px;
+		height: 6px;
+		background-color: #5fcf21;
+	}
+	progress::-moz-progress-value {
+		border-radius: 8px 0 0 8px;
+		height: 6px;
+		background-color: #5fcf21;
+	}
+	progress::-ms-fill {
+		border-radius: 8px 0 0 8px;
+		height: 6px;
+		background-color: #5fcf21;
 	}
 }
 

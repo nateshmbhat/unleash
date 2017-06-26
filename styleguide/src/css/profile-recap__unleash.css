@@ -5,6 +5,7 @@
 	.profile-recap__unleash {
 		max-width: 33%;
 		width: 372px;
+		margin-left: auto;
 	}
 }
 

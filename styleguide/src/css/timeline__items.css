@@ -1,0 +1,39 @@
+/* timeline__items.css */
+
+.timeline__items {
+	list-style: none;
+	margin: 0;
+	padding: 0 18px;
+	position: relative;
+}
+@media screen and (min-width: 768px) {
+	.timeline__items {
+		padding: 0 30px;
+		margin-left: 65px;
+	}	
+	.timeline__items::before {
+		content: '';
+		position: absolute;
+		left: 21px;
+		top: -60px;
+		width: 2px;
+		height: calc(100% + 60px);
+		background-color: #e9edee;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.timeline__items {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+	}
+	.timeline__items::before {
+		top: -36px;
+		left: 50%;
+	}
+}

@@ -2,11 +2,8 @@
 
 .profile-recap {
 	position: relative;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
+	margin: 26px 0 36px;
 }
 @media screen and (max-width: 767px) {
 	.profile-recap {
@@ -17,6 +14,12 @@
 @media screen and (min-width: 768px) {
 	.profile-recap {
 		padding: 0 30px;
+		margin: 40px 0 50px;
+	}	
+}
+@media screen and (min-width: 1024px) {
+	.profile-recap {
+		margin: 60px 0;
 	}	
 }
 
@@ -56,19 +59,12 @@
 }
 
 
-@media screen and (min-width: 1160px) {
-	/* Desktop: Name & Social icons placed on top */
-	.profile-recap__info__top {
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		display: flex;
-		align-items: center;
-	}
+.profile-recap__info {
+	position: relative;
 }
 
 .profile-recap__info__name {
+	display: inline-block;
 	font: 600 22px/1 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #242424;
@@ -131,7 +127,6 @@
 @media screen and (min-width: 768px) and (max-width: 1159px) {
 	.profile-recap__info {
 		padding-bottom: 35px;
-		max-height: 180px;
 		position: relative;
 		max-width: 40%;
 	}
@@ -146,13 +141,7 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	width: 100%;
-	max-width: 100%;
+	display: inline-flex;
 	position: relative;
 }
 @media screen and (max-width: 767px) {
@@ -160,13 +149,17 @@
 		margin-top: 30px;
 	}
 }
+@media screen and (min-width: 1216px) {
+	.profile-recap__info__skills {
+		display: flex;
+	}
+}
 
 .profile-recap__info__skills--unfolded {
-	display: inline-block;
+	flex-wrap: wrap;
 }
 .profile-recap__info__skills--unfolded .profile-recap__info__skill {
-	display: inline-flex;
-	margin-bottom: 5px;
+	display: inline-block;
 }
 
 .profile-recap__info__skills::after {
@@ -179,6 +172,10 @@
 	cursor: pointer;
 }
 
+.profile-recap__info__skill {
+	display: inline-block;
+	margin-bottom: 5px;
+}
 .profile-recap__info__skill:not(:last-child) {
 	margin-right: 6px;
 }
@@ -230,17 +227,11 @@
 		margin-right: 20px;
 	}
 }
-
-@media screen and (min-width: 768px) and (max-width: 1159px) {
-	.profile-recap__info__social-networks {
-		position: absolute;
-		bottom: 0;
-	}
-}
 @media screen and (min-width: 1160px) {
 	.profile-recap__info__social-networks {
-		margin-left: 29px;
-		margin-top: 6px;
+		position: absolute;
+		left: 0;
+		top: 8px;
 	}
 }
 

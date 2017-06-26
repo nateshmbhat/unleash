@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Header bar | Unleash CSS Styleguide</title>
-	<link rel="icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="css/layout.css">
-	<link rel="stylesheet" href="css/header.css">
-</head>
-<body>
+module.exports = `
 	<header class="header">
 		<a href="#" class="header__logo">
 			<img src="images/logo.png" alt="Unleash" class="header__logo__img">
@@ -43,5 +34,4 @@
 			<span class="header__user-settings__label">NO</span>
 		</button>
 	</header>
-</body>
-</html>
+`
