@@ -20,6 +20,13 @@ const store = configureStore();
 const authService = new AuthService(store.dispatch);
 authService.init();
 
+browserHistory.listen((location) => {
+  const path = (/#!(\/.*)$/.exec(location.hash) || [])[1];
+  if (path) {
+    history.replace(path);
+  }
+});
+
 const App = () => (
   <Provider store={store}>
     <IntlProvider locale="en">
