@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
 import { IntlProvider } from 'react-intl';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import { syncHistoryWithStore } from 'react-router-redux';
 import routes from '../config/routes';
 import configureStore from '../store/configureStore';
 import AuthService from '../services/authService';
@@ -15,6 +16,7 @@ require('isomorphic-fetch');
 injectTapEventPlugin();
 
 const store = configureStore();
+const history = syncHistoryWithStore(browserHistory, store);
 
 // Init Firebase and Google Auth
 const authService = new AuthService(store.dispatch);
