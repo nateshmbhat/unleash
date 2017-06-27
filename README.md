@@ -8,10 +8,8 @@ An app that helps developers grow and track their progress.
 
 ## Requirements
 
-You need to install:
-- [Docker](https://www.docker.com)
-
-(Note: if you're using OS X and install Docker Toolbox with Docker Machine webpack's livereload won't probably work - please install Docker For Mac to fully utilize webpack's livereloading)
+- [Node 6.5+](https://nodejs.org/en/)
+- [yarn](https://yarnpkg.com/en/)
 
 ## Setup
 
@@ -20,7 +18,7 @@ You need to install:
 In order to install node dependencies run the command (it might take a while but it's one-time only):
 
 ```shell
-docker-compose run web yarn
+yarn
 ```
 
 ### Config
@@ -43,52 +41,40 @@ Steps to get a Firebase Key for local development:
  5. On the Sign in method tab, enable the Google sign-in method and click Save.
  6. Update your `config.js` with your Firebase key.
 
-### Running
+### Running (development)
 
-In the Docker Quickstart Terminal go to the application folder and type:
-
-```shell
-docker-compose up
-```
-
-Wait for Docker to run the application.
-
-Once the application is running you can access it at [localhost](http://localhost).
-
-### Running as daemon
-
-Optionally you can also run the application as a daemon. Just type:
+In the Terminal go to the application folder and type:
 
 ```shell
-docker-compose up -d
+yarn start
 ```
 
-If you'd like to see if it's running properly just type:
+Wait until webpack builds the application (watch the progress bar on the right).
+
+Once the application is running you can access it at [localhost:3000](http://localhost:3000).
+
+### Building (production)
+
+In order to build the app and generate static files just type:
 
 ```shell
-docker-compose logs -ft
+yarn build
 ```
 
-### Accessing the container
-
-If you want to get into the container with running application just type:
-
-```shell
-docker-compose run web bash
-```
+This will generate static files under `/build` directory and won't start any server. Those minified files are ready to be uploaded to production server where `index.html` is being served.
 
 ### Testing
 
 In order to run tests please type:
 
 ```shell
-docker-compose run web yarn test
+yarn test
 ```
 
 In order to run lint please type:
 
 ```shell
-docker-compose run web yarn test:lint
+yarn test:lint
 ```
 Maintained by the [developers at x-team](https://www.x-team.com) | [developer blog](https://www.x-team.com/blog/)
 

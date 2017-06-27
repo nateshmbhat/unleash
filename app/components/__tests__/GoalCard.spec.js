@@ -80,6 +80,15 @@ describe('Goal Card', () => {
       expect(modalActions[2].props.label).to.equal('Close');
     });
 
+    it('should create Mark as achieved action when Goal is users', () => {
+      renderComponent({ editable: true, path: { id: 7 } });
+      const modalActions = component.find('GoalsModal').props().modalActions;
+      expect(modalActions.length).to.equal(3);
+      expect(modalActions[0].props.label).to.equal('Mark as achieved');
+      expect(modalActions[1].props.label).to.equal('Remove');
+      expect(modalActions[2].props.label).to.equal('Close');
+    });
+
     it('should pass NotifyOnSlack field when Goal is users', () => {
       renderComponent({ usersGoal: true, path: { id: 7 } });
       const extraFields = component.find('GoalsModal').props().extraFields;
