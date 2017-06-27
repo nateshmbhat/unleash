@@ -38,6 +38,12 @@
 	top: -12px;
 	left: calc(50% - 10px);
 }
+.timeline__item__intro--full::before {
+	content: "✓";
+	text-align: center;
+	color: #fff;
+	background-color: #e9edee;
+}
 
 @media screen and (min-width: 768px) {
 	.timeline__item__intro::before {
@@ -47,12 +53,12 @@
 }
 @media screen and (min-width: 1024px) {
 	.timeline__item:nth-child(odd) .timeline__item__intro::before {
-		left: -50px;
+		left: -54px;
 		top: calc(50% - 10px);
 	}
 	.timeline__item:nth-child(even) .timeline__item__intro::before {
 		left: auto;
-		right: -52px;
+		right: -48px;
 		top: calc(50% - 10px);
 	}
 }
@@ -131,30 +137,40 @@
 		border-radius: 8px;
 		background-color: #e1e1e1;
 	}
-	progress::-webkit-progress-bar {
+	.timeline__item__progress-bar::-webkit-progress-bar {
 		height: 6px;
 		border-radius: 8px;
 		background-color: #e1e1e1;
 	}
-	progress::-moz-progress-bar {
+	.timeline__item__progress-bar::-moz-progress-bar {
 		height: 6px;
 		border-radius: 8px;
 		background-color: #e1e1e1;
 	}
-	progress::-webkit-progress-value {
+	.timeline__item__progress-bar::-webkit-progress-value {
 		border-radius: 8px 0 0 8px;
 		height: 6px;
 		background-color: #5fcf21;
 	}
-	progress::-moz-progress-value {
+	.timeline__item__progress-bar::-moz-progress-value {
 		border-radius: 8px 0 0 8px;
 		height: 6px;
 		background-color: #5fcf21;
 	}
-	progress::-ms-fill {
+	.timeline__item__progress-bar::-ms-fill {
 		border-radius: 8px 0 0 8px;
 		height: 6px;
 		background-color: #5fcf21;
+	}
+
+	.timeline__item__progress-bar--red::-webkit-progress-value {
+		background-color: red;
+	}
+	.timeline__item__progress-bar--red::-moz-progress-value {
+		background-color: red;
+	}
+	.timeline__item__progress-bar--red::-ms-fill {
+		background-color: red;
 	}
 }
 

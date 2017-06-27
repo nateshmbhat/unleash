@@ -1,0 +1,39 @@
+@media screen and (max-width: 767px) {
+	.profile__social-icons {
+		display: none;
+	}
+}
+@media screen and (min-width: 768px) {
+	.profile__social-icons {
+		display: flex;
+		align-items: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.profile__social-icon:not(:last-child) {
+		margin-right: 20px;
+	}
+}
+
+/* if there's space, icons are placed alongside the name via js/social-icons.js */
+.profile__social-icons--top {
+	position: absolute;
+	left: 0;
+	top: 6px;
+}
+
+.profile__social-icon__link__icon {
+	fill: #b2b6bc;
+  fill-rule: evenodd;
+  opacity: 0.5;
+  transition: opacity .2s ease-out;
+}
+.profile__social-icon__link:hover .profile__social-icon__link__icon {
+	opacity: 1;
+}
+.profile__social-icon__link--facebook {}
+.profile__social-icon__link--twitter {}
+.profile__social-icon__link--instagram {}
+.profile__social-icon__link--pinterest {}
+.profile__social-icon__link--linkedin {}

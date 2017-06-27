@@ -16,7 +16,7 @@ function renderItems (items) {
   return items.map((item) => {
     return `
 	  <li class="timeline__item">
-      <div class="timeline__item__intro">
+      <div class="timeline__item__intro ${(item.currentSteps == item.totalSteps ? 'timeline__item__intro--full' : '')}">
       	<h3 class="timeline__item__title">${item.title}</h3>
       	<p class="timeline__item__description">${(item.description ? item.description : '')}</p>
       	<div class="timeline__item__progress">
@@ -26,11 +26,11 @@ function renderItems (items) {
 						<span class="timeline__item__steps__bar">/</span>
 						<span class="timeline__item__steps__total">${item.totalSteps}</span>
 					</div>
-					<progress class="timeline__item__progress-bar" max="${item.totalSteps}" value="${item.currentSteps}"></progress>
-					<button class="timeline__item__switch-view">Show Less</button>
+					<progress class="timeline__item__progress-bar ${((item.currentSteps/item.totalSteps < .3) ? 'timeline__item__progress-bar--red' : '')}" max="${item.totalSteps}" value="${item.currentSteps}"></progress>
+					<button class="timeline__item__switch-view">Show More</button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
-      <div class="timeline__item__info">
+      <div class="timeline__item__info is-hidden">
 				<ul class="timeline__item__checklist">
 					${renderChecklist(item.checklist)}
 					<li class="timeline__item__addnew">

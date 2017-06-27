@@ -1,40 +1,40 @@
-.profile-recap__unleash {
+.profile__unleash {
 	
 }
 @media screen and (min-width: 768px) {
-	.profile-recap__unleash {
+	.profile__unleash {
 		max-width: 33%;
 		width: 372px;
 		margin-left: auto;
 	}
 }
 
-.profile-recap__unleash__title {
+.profile__unleash__title {
 	font: 400 14px 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #b8b7bc;
 	margin: 0 0 20px;
 }
 @media screen and (max-width: 767px) {
-	.profile-recap__unleash__title {
+	.profile__unleash__title {
 		margin-top: 40px;
 	}
 }
-.profile-recap__unleash__graph {
+.profile__unleash__graph {
 	width: 100%;
 	overflow: hidden;
 }
-.profile-recap__unleash__graph__img {
+.profile__unleash__graph__img {
 	min-width: 100%;
 }
 
-.profile-recap__unleash__goals {
+.profile__unleash__goals {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 @media screen and (min-width: 1024px) {
-	.profile-recap__unleash__goals {
+	.profile__unleash__goals {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -46,13 +46,13 @@
 
 @media screen and (max-width: 1023px) {
 	/* Goals vertical aligned on Mobile & Tablets */
-	.profile-recap__unleash__goals {
+	.profile__unleash__goals {
 		margin-top: 1em;
 		padding: .75em 0 .5em;
 		border-top: 1px solid #e9edee;
 		border-bottom: 1px solid #e9edee;
 	}
-	.profile-recap__unleash__goal {
+	.profile__unleash__goal {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -62,13 +62,13 @@
 	}
 }
 
-.profile-recap__unleash__goal__label {
+.profile__unleash__goal__label {
 	display: block;
 	font: 14px/3 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #b8b7bc;
 }
-.profile-recap__unleash__goal__amount {
+.profile__unleash__goal__amount {
 	display: block;
 	font: 20px 'Montserrat', sans-serif;
 	color: #242424;

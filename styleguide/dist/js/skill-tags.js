@@ -1,16 +1,16 @@
 (function(){
   "use strict";
 	
-  var section = document.querySelector('.profile-recap__info');
-  var tagsContainer = document.querySelector('.profile-recap__info__skills');
-  var tags = document.querySelectorAll('.profile-recap__info__skill');
+  var section = document.querySelector('.profile__info');
+  var tagsContainer = document.querySelector('.profile__skills');
+  var tags = document.querySelectorAll('.profile__skill');
 	var totalTags = tags.length;
 
   function hideTags() { 
 
   	// display all tags
 		for (var i = 0; i < totalTags; i++) {
-			tags[i].classList.remove('profile-recap__info__skill--hidden');
+			tags[i].classList.remove('profile__skill--hidden');
 		}
 		// set current number to empty
 		tagsContainer.setAttribute("data-content", "");
@@ -43,12 +43,12 @@
 
 			// hide overflowing tags
 			for (i; i < totalTags; i++) {
-				tags[i].classList.add('profile-recap__info__skill--hidden');
+				tags[i].classList.add('profile__skill--hidden');
 			}
 			
 			// click handler
 			tagsContainer.addEventListener("click", function(event){
-		  	tagsContainer.classList.add('profile-recap__info__skills--unfolded')
+		  	tagsContainer.classList.add('profile__skills--unfolded')
 		  	tagsContainer.setAttribute("data-content", "");
 		  });
 

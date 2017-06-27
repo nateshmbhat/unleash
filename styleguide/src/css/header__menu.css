@@ -1,0 +1,27 @@
+/* header__menu.css */
+.header__menu {
+	line-height: 70px;
+}
+.header__menu__list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.header__menu__item {
+	display: inline-block;
+	margin-right: 2rem;
+}
+.header__menu__link {
+	display: inline-block;
+	font: 600 14px/70px 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #b8b7bc;
+	border-bottom: 2px solid transparent;
+	transition: color .3s, border-bottom-color .3s;
+}
+.header__menu__link:hover,
+.header__menu__link--current {
+	color: #f33c57;
+	border-bottom-color: #f33c57;
+}

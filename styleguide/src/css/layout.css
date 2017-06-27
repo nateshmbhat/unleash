@@ -14,3 +14,7 @@ body {
   background: #34323b;
   color: #fff;
 }
+.wrap {
+	max-width: 1180px;
+	margin: 0 auto;
+}

@@ -1,5 +1,9 @@
 /* timeline__item__checklist.css */
 
+.timeline__item__info.is-hidden {
+	display: none;
+}
+
 /* Desktop layout */
 @media screen and (min-width: 1024px) {
 	.timeline__item__info {

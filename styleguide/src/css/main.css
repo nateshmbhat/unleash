@@ -1,10 +1,13 @@
 @charset "UTF-8";
 @import "layout.css";
 @import "header.css";
+@import "header__menu.css";
+@import "header__menu--mobile.css";
 @import "header__user-menu.css";
-@import "header--mobile.css";
-@import "profile-recap.css";
-@import "profile-recap__unleash.css";
+@import "profile.css";
+@import "profile__social-icons.css";
+@import "profile__skills.css";
+@import "profile__unleash.css";
 @import "timeline__header.css";
 @import "timeline__date-label.css";
 @import "timeline__items.css";

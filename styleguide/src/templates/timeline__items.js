@@ -47,4 +47,5 @@ module.exports = `
 	<ol class="timeline__items">`
 		+ items +
 	`</ol>
+	<script src="js/timeline__item__toggle.js"></script>
 `

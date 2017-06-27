@@ -14,168 +14,176 @@
 			<img src="images/logo.png" alt="Unleash" class="header__logo__img">
 			<span class="header__logo__text">Unleash</span>
 		</a>
-		<nav class="header__nav">
-			<ul class="header__nav__list">
-				<li class="header__nav__item">
-					<a href="#" class="header__nav__link">
-						<span class="header__nav__link__label">Home</span>
-					</a>
-				</li>
-				<li class="header__nav__item">
-					<a href="#" class="header__nav__link header__nav__link--current">
-						<span class="header__nav__link__label header__nav__link__label--current">My Path</span>
-					</a>
-				</li>
-				<li class="header__nav__item">
-					<a href="#" class="header__nav__link">
-					<span class="header__nav__link__label">Profiles</span></a>
-				</li>
-				<li class="header__nav__item">
-					<a href="#" class="header__nav__link">
-					<span class="header__nav__link__label">Goals</span></a>
-				</li>
-				<li class="header__nav__item">
-					<a href="#" class="header__nav__link">
-					<span class="header__nav__link__label">Skills</span></a>
-				</li>
-			</ul>
-		</nav>
-		<nav class="header__user-menu">
-			<input type="checkbox" class="header__user-menu__btn" id="header__user-menu__btn">
-			<label class="header__user-menu__label" for="header__user-menu__btn">NO</label>
-			<ul class="header__user-menu__list">
-				<li class="header__user-menu__item">Name</li>
-				<li class="header__user-menu__item">email</li>
-				<li class="header__user-menu__item">Edit Profile</li>
-				<li class="header__user-menu__item">Sign Out</li>
-			</ul>
-		</nav>
 		
-		<script src="js/mobile-menu.js"></script>
-	</header>
+<nav class="header__menu">
+	<ul class="header__menu__list">
+		<li class="header__menu__item">
+			<a href="#" class="header__menu__link">
+				<span class="header__menu__link__label">Home</span>
+			</a>
+		</li>
+		<li class="header__menu__item">
+			<a href="#" class="header__menu__link header__menu__link--current">
+				<span class="header__menu__link__label header__menu__link__label--current">My Path</span>
+			</a>
+		</li>
+		<li class="header__menu__item">
+			<a href="#" class="header__menu__link">
+			<span class="header__menu__link__label">Profiles</span></a>
+		</li>
+		<li class="header__menu__item">
+			<a href="#" class="header__menu__link">
+			<span class="header__menu__link__label">Goals</span></a>
+		</li>
+		<li class="header__menu__item">
+			<a href="#" class="header__menu__link">
+			<span class="header__menu__link__label">Skills</span></a>
+		</li>
+	</ul>
+	<script src="js/mobile-menu.js"></script>
+</nav>
 
-	<section class="profile-recap">
+<nav class="header__user-menu">
+	<input type="checkbox" class="header__user-menu__btn" id="header__user-menu__btn">
+	<label class="header__user-menu__label" for="header__user-menu__btn">NO</label>
+	<ul class="header__user-menu__list">
+		<li class="header__user-menu__item header__user-menu__item--name">Nikita</li>
+		<li class="header__user-menu__item header__user-menu__item--email">nikita.ormonov@eleken.co</li>
+		<li class="header__user-menu__item header__user-menu__item--edit"><a href="" class="header__user-menu__item__link">Edit Profile</a></li>
+		<li class="header__user-menu__item header__user-menu__item--sign-out"><a href="" class="header__user-menu__item__link">Sign Out</a></li>
+	</ul>
+</nav>
+
+	</header>
+<div class="wrap">
+	<section class="profile">
 		
-			<div class="profile-recap__avatar">
-				<img src="images/avatar.png" alt="" class="profile-recap__avatar__img">
+			<div class="profile__avatar">
+				<img src="images/avatar.png" alt="" class="profile__avatar__img">
 			</div>
 
-			<div class="profile-recap__info">
+			<div class="profile__info">
 					
-					<h2 class="profile-recap__info__name">Lester Boone</h2>
+				<h2 class="profile__info__name">Lester Boone</h2>
 
-					<p class="profile-recap__info__intro">The power of your dreams</p>
+				<p class="profile__info__intro">Ad nemo dolore quis architecto ab animi, alias atque maxime! Sequi, fugit reiciendis totam corporis ad aliquid minima iure a fuga numquam?</p>
 
-					<ul class="profile-recap__info__skills" data-content="">
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">HTML</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">Javascript</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">Angular</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">CSS</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">Python</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">React</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">Angular</a>
-						</li>
-						<li class="profile-recap__info__skill">
-							<a href="" class="profile-recap__info__skill__link">Javascript</a>
-						</li>
-					</ul>
+				
+<ul class="profile__skills" data-content="">
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">HTML</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">Javascript</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">Angular</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">CSS</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">Python</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">React</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">Angular</a>
+	</li>
+	<li class="profile__skill">
+		<a href="" class="profile__skill__link">Javascript</a>
+	</li>
+</ul>
 
-					<a href="" class="profile-recap__info__profile-link">https://lesterboone.com</a>
 
-					<ul class="profile-recap__info__social-networks">
-						<li class="profile-recap__info__social">
-							<a href="" class="profile-recap__info__social__link profile-recap__info__social__link--facebook">
-								<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18" viewBox="0 0 9 18">
-								  <path class="profile-recap__info__social__link__icon" id="facebook" class="cls-1" d="M698,174h-3v-9h-3.009L692,162h3v-2c0-2.535.769-4.015,3.618-4.015h2.37L701,159h-2c-1.109,0-1,.19-1,1v2h3l-0.307,3H698v9Z" transform="translate(-692 -156)"/>
-								</svg>
-						</a>
-						</li>
-						<li class="profile-recap__info__social">
-							<a href="" class="profile-recap__info__social__link profile-recap__info__social__link--twitter">
-								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16">
-								  <path class="profile-recap__info__social__link__icon" id="twitter" class="cls-1" d="M740.013,158.893a7.583,7.583,0,0,1-2.24.637,4.034,4.034,0,0,0,1.715-2.236,7.644,7.644,0,0,1-2.477.981A3.836,3.836,0,0,0,734.163,157a3.973,3.973,0,0,0-3.9,4.04,4.233,4.233,0,0,0,.1.921,10.963,10.963,0,0,1-8.042-4.221,4.134,4.134,0,0,0-.526,2.031,4.077,4.077,0,0,0,1.734,3.362,3.775,3.775,0,0,1-1.766-.506v0.052a4.009,4.009,0,0,0,3.129,3.961,3.8,3.8,0,0,1-1.028.142,3.681,3.681,0,0,1-.733-0.074,3.921,3.921,0,0,0,3.644,2.806,7.66,7.66,0,0,1-4.846,1.729,7.516,7.516,0,0,1-.93-0.056A10.765,10.765,0,0,0,726.979,173c7.174,0,11.1-6.155,11.1-11.494q0-.263-0.012-0.522A8.057,8.057,0,0,0,740.013,158.893Z" transform="translate(-721 -157)"/>
-								</svg>
-							</a>
-						</li>
-						<li class="profile-recap__info__social">
-							<a href="" class="profile-recap__info__social__link profile-recap__info__social__link--instagram">
-								<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
-								  <path class="profile-recap__info__social__link__icon" id="instagram" class="cls-1" d="M766,154h9a6,6,0,0,1,6,6v9a6,6,0,0,1-6,6h-9a6,6,0,0,1-6-6v-9A6,6,0,0,1,766,154Zm0,2h9a4,4,0,0,1,4,4v9a4,4,0,0,1-4,4h-9a4,4,0,0,1-4-4v-9A4,4,0,0,1,766,156Zm4.5,3a5.5,5.5,0,1,1-5.5,5.5A5.7,5.7,0,0,1,770.5,159Zm0.081,2A3.423,3.423,0,0,1,774,164.419a3.67,3.67,0,0,1-3.566,3.566,3.422,3.422,0,0,1-3.421-3.423A3.67,3.67,0,0,1,770.581,161ZM776,158a1,1,0,1,1-1,1A1,1,0,0,1,776,158Z" transform="translate(-760 -154)"/>
-								</svg>
-							</a>
-						</li>
-						<li class="profile-recap__info__social">
-							<a href="" class="profile-recap__info__social__link profile-recap__info__social__link--pinterest">
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-								  <path class="profile-recap__info__social__link__icon" id="pinterest" class="cls-1" d="M811,155a10,10,0,0,0-4.012,19.158,8.886,8.886,0,0,1,.173-2.3c0.2-.811,1.286-5.448,1.286-5.448a3.849,3.849,0,0,1-.319-1.582c0-1.483.859-2.589,1.927-2.589a1.339,1.339,0,0,1,1.349,1.5,21.426,21.426,0,0,1-.883,3.548,1.548,1.548,0,0,0,1.578,1.926c1.894,0,3.17-2.434,3.17-5.316,0-2.191-1.476-3.832-4.159-3.832a4.734,4.734,0,0,0-4.921,4.789,2.889,2.889,0,0,0,.659,1.961,0.484,0.484,0,0,1,.144.557c-0.048.184-.159,0.627-0.2,0.8a0.344,0.344,0,0,1-.5.251c-1.4-.57-2.047-2.1-2.047-3.82,0-2.841,2.395-6.246,7.142-6.246,3.817,0,6.329,2.761,6.329,5.727,0,3.923-2.181,6.853-5.394,6.853a2.867,2.867,0,0,1-2.441-1.246s-0.581,2.3-.7,2.748a8.394,8.394,0,0,1-1,2.143A10,10,0,1,0,811,155Z" transform="translate(-801 -155)"/>
-								</svg>
-							</a>
-						</li>
-						<li class="profile-recap__info__social">
-							<a href="" class="profile-recap__info__social__link profile-recap__info__social__link--linkedin">
-								<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
-								  <path class="profile-recap__info__social__link__icon" id="linkedin" class="cls-1" d="M844.4,172.012V161.889h-3.213v10.123H844.4Zm-1.606-11.5a1.787,1.787,0,1,0-.024,0H842.8Zm3.387,11.5H849.4v-5.653a2.37,2.37,0,0,1,.106-0.82,1.768,1.768,0,0,1,1.649-1.232c1.164,0,1.631.928,1.631,2.289v5.416H856v-5.8c0-3.11-1.587-4.556-3.7-4.556a3.187,3.187,0,0,0-2.921,1.7H849.4v-1.467h-3.217c0.043,0.95,0,10.123,0,10.123h0Z" transform="translate(-841 -157)"/>
-								</svg>
-							</a>
-						</li>
-					</ul>
+				<a href="" class="profile__info__profile-link">https://lesterboone.com</a>
 
-			</div> <!--  profile-recap__info  -->
+				
+<ul class="profile__social-icons">
+	<li class="profile__social-icon">
+		<a href="" class="profile__social-icon__link profile__social-icon__link--facebook">
+			<svg xmlns="http://www.w3.org/2000/svg" width="9" height="18" viewBox="0 0 9 18">
+			  <path class="profile__social-icon__link__icon" id="facebook" class="cls-1" d="M698,174h-3v-9h-3.009L692,162h3v-2c0-2.535.769-4.015,3.618-4.015h2.37L701,159h-2c-1.109,0-1,.19-1,1v2h3l-0.307,3H698v9Z" transform="translate(-692 -156)"/>
+			</svg>
+	</a>
+	</li>
+	<li class="profile__social-icon">
+		<a href="" class="profile__social-icon__link profile__social-icon__link--twitter">
+			<svg xmlns="http://www.w3.org/2000/svg" width="19" height="16" viewBox="0 0 19 16">
+			  <path class="profile__social-icon__link__icon" id="twitter" class="cls-1" d="M740.013,158.893a7.583,7.583,0,0,1-2.24.637,4.034,4.034,0,0,0,1.715-2.236,7.644,7.644,0,0,1-2.477.981A3.836,3.836,0,0,0,734.163,157a3.973,3.973,0,0,0-3.9,4.04,4.233,4.233,0,0,0,.1.921,10.963,10.963,0,0,1-8.042-4.221,4.134,4.134,0,0,0-.526,2.031,4.077,4.077,0,0,0,1.734,3.362,3.775,3.775,0,0,1-1.766-.506v0.052a4.009,4.009,0,0,0,3.129,3.961,3.8,3.8,0,0,1-1.028.142,3.681,3.681,0,0,1-.733-0.074,3.921,3.921,0,0,0,3.644,2.806,7.66,7.66,0,0,1-4.846,1.729,7.516,7.516,0,0,1-.93-0.056A10.765,10.765,0,0,0,726.979,173c7.174,0,11.1-6.155,11.1-11.494q0-.263-0.012-0.522A8.057,8.057,0,0,0,740.013,158.893Z" transform="translate(-721 -157)"/>
+			</svg>
+		</a>
+	</li>
+	<li class="profile__social-icon">
+		<a href="" class="profile__social-icon__link profile__social-icon__link--instagram">
+			<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+			  <path class="profile__social-icon__link__icon" id="instagram" class="cls-1" d="M766,154h9a6,6,0,0,1,6,6v9a6,6,0,0,1-6,6h-9a6,6,0,0,1-6-6v-9A6,6,0,0,1,766,154Zm0,2h9a4,4,0,0,1,4,4v9a4,4,0,0,1-4,4h-9a4,4,0,0,1-4-4v-9A4,4,0,0,1,766,156Zm4.5,3a5.5,5.5,0,1,1-5.5,5.5A5.7,5.7,0,0,1,770.5,159Zm0.081,2A3.423,3.423,0,0,1,774,164.419a3.67,3.67,0,0,1-3.566,3.566,3.422,3.422,0,0,1-3.421-3.423A3.67,3.67,0,0,1,770.581,161ZM776,158a1,1,0,1,1-1,1A1,1,0,0,1,776,158Z" transform="translate(-760 -154)"/>
+			</svg>
+		</a>
+	</li>
+	<li class="profile__social-icon">
+		<a href="" class="profile__social-icon__link profile__social-icon__link--pinterest">
+			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+			  <path class="profile__social-icon__link__icon" id="pinterest" class="cls-1" d="M811,155a10,10,0,0,0-4.012,19.158,8.886,8.886,0,0,1,.173-2.3c0.2-.811,1.286-5.448,1.286-5.448a3.849,3.849,0,0,1-.319-1.582c0-1.483.859-2.589,1.927-2.589a1.339,1.339,0,0,1,1.349,1.5,21.426,21.426,0,0,1-.883,3.548,1.548,1.548,0,0,0,1.578,1.926c1.894,0,3.17-2.434,3.17-5.316,0-2.191-1.476-3.832-4.159-3.832a4.734,4.734,0,0,0-4.921,4.789,2.889,2.889,0,0,0,.659,1.961,0.484,0.484,0,0,1,.144.557c-0.048.184-.159,0.627-0.2,0.8a0.344,0.344,0,0,1-.5.251c-1.4-.57-2.047-2.1-2.047-3.82,0-2.841,2.395-6.246,7.142-6.246,3.817,0,6.329,2.761,6.329,5.727,0,3.923-2.181,6.853-5.394,6.853a2.867,2.867,0,0,1-2.441-1.246s-0.581,2.3-.7,2.748a8.394,8.394,0,0,1-1,2.143A10,10,0,1,0,811,155Z" transform="translate(-801 -155)"/>
+			</svg>
+		</a>
+	</li>
+	<li class="profile__social-icon">
+		<a href="" class="profile__social-icon__link profile__social-icon__link--linkedin">
+			<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+			  <path class="profile__social-icon__link__icon" id="linkedin" class="cls-1" d="M844.4,172.012V161.889h-3.213v10.123H844.4Zm-1.606-11.5a1.787,1.787,0,1,0-.024,0H842.8Zm3.387,11.5H849.4v-5.653a2.37,2.37,0,0,1,.106-0.82,1.768,1.768,0,0,1,1.649-1.232c1.164,0,1.631.928,1.631,2.289v5.416H856v-5.8c0-3.11-1.587-4.556-3.7-4.556a3.187,3.187,0,0,0-2.921,1.7H849.4v-1.467h-3.217c0.043,0.95,0,10.123,0,10.123h0Z" transform="translate(-841 -157)"/>
+			</svg>
+		</a>
+	</li>
+</ul>
 
-			<div class="profile-recap__unleash">
 
-				<h4 class="profile-recap__unleash__title">Unleash Tempo</h4>
+			</div> <!--  profile__info  -->
 
-				<div class="profile-recap__unleash__graph">
+			<div class="profile__unleash">
+
+				<h4 class="profile__unleash__title">Unleash Tempo</h4>
+
+				<div class="profile__unleash__graph">
 					<!-- canvas -->
-					<img class="profile-recap__unleash__graph__img" src="images/graph.png" alt="">
+					<img class="profile__unleash__graph__img" src="images/graph.png" alt="">
 				</div>
 
-				<ul class="profile-recap__unleash__goals">
-					<li class="profile-recap__unleash__goal">
-						<span class="profile-recap__unleash__goal__label">Paths</span>
-						<span class="profile-recap__unleash__goal__amount">8</span>
+				<ul class="profile__unleash__goals">
+					<li class="profile__unleash__goal">
+						<span class="profile__unleash__goal__label">Paths</span>
+						<span class="profile__unleash__goal__amount">8</span>
 					</li>
-					<li class="profile-recap__unleash__goal">
-						<span class="profile-recap__unleash__goal__label">Open Steps</span>
-						<span class="profile-recap__unleash__goal__amount">54</span>
+					<li class="profile__unleash__goal">
+						<span class="profile__unleash__goal__label">Open Steps</span>
+						<span class="profile__unleash__goal__amount">54</span>
 					</li>
-					<li class="profile-recap__unleash__goal">
-						<span class="profile-recap__unleash__goal__label">Finished Steps</span>
-						<span class="profile-recap__unleash__goal__amount">186</span>
+					<li class="profile__unleash__goal">
+						<span class="profile__unleash__goal__label">Finished Steps</span>
+						<span class="profile__unleash__goal__amount">186</span>
 					</li>
 				</ul>
 
-			</div> <!--  profile-recap__unleash  -->
+			</div> <!--  profile__unleash  -->
 		<script src="js/skill-tags.js"></script>
 		<script src="js/social-icons.js"></script>
 	</section>
 
 	<section class="timeline">
-		<header class="timeline__header">
-			<div class="timeline__search">
-				<input class="timeline__search__input" type="search" placeholder="Search">
-			</div>
-			<div class="timeline__sortby">
-				<select name="" id="" class="timeline__sortby__dropdown">
-					<option class="sortby__dropdown__option" value="byDate" selected>Sort by date</option>
-					<option class="sortby__dropdown__option" value="byName">Sort by name</option>
-				</select>
-			</div>
-		</header>
+		
+<header class="timeline__header">
+	<div class="timeline__search">
+		<input class="timeline__search__input" type="search" placeholder="Search">
+	</div>
+	<div class="timeline__sortby">
+		<select name="" id="" class="timeline__sortby__dropdown">
+			<option class="sortby__dropdown__option" value="byDate" selected>Sort by date</option>
+			<option class="sortby__dropdown__option" value="byName">Sort by name</option>
+		</select>
+	</div>
+</header>
+
 
 		<div class="timeline__date-label">
 			Today
@@ -185,7 +193,7 @@
 	<ol class="timeline__items">
 		
 	  <li class="timeline__item">
-      <div class="timeline__item__intro">
+      <div class="timeline__item__intro ">
       	<h3 class="timeline__item__title">Blog post published</h3>
       	<p class="timeline__item__description">Publish a blog post about React Native development.</p>
       	<div class="timeline__item__progress">
@@ -195,11 +203,11 @@
 						<span class="timeline__item__steps__bar">/</span>
 						<span class="timeline__item__steps__total">4</span>
 					</div>
-					<progress class="timeline__item__progress-bar" max="4" value="1"></progress>
-					<button class="timeline__item__switch-view">Show Less</button>
+					<progress class="timeline__item__progress-bar timeline__item__progress-bar--red" max="4" value="1"></progress>
+					<button class="timeline__item__switch-view">Show More</button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
-      <div class="timeline__item__info">
+      <div class="timeline__item__info is-hidden">
 				<ul class="timeline__item__checklist">
 					
       <li class="timeline__item__checkbox">
@@ -248,7 +256,7 @@
     
 
 	  <li class="timeline__item">
-      <div class="timeline__item__intro">
+      <div class="timeline__item__intro ">
       	<h3 class="timeline__item__title">Meetups & Conferences</h3>
       	<p class="timeline__item__description"></p>
       	<div class="timeline__item__progress">
@@ -258,11 +266,11 @@
 						<span class="timeline__item__steps__bar">/</span>
 						<span class="timeline__item__steps__total">8</span>
 					</div>
-					<progress class="timeline__item__progress-bar" max="8" value="6"></progress>
-					<button class="timeline__item__switch-view">Show Less</button>
+					<progress class="timeline__item__progress-bar " max="8" value="6"></progress>
+					<button class="timeline__item__switch-view">Show More</button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
-      <div class="timeline__item__info">
+      <div class="timeline__item__info is-hidden">
 				<ul class="timeline__item__checklist">
 					
       <li class="timeline__item__checkbox">
@@ -356,7 +364,7 @@
     
 
 	  <li class="timeline__item">
-      <div class="timeline__item__intro">
+      <div class="timeline__item__intro timeline__item__intro--full">
       	<h3 class="timeline__item__title">Online Course Video Review</h3>
       	<p class="timeline__item__description"></p>
       	<div class="timeline__item__progress">
@@ -366,11 +374,11 @@
 						<span class="timeline__item__steps__bar">/</span>
 						<span class="timeline__item__steps__total">5</span>
 					</div>
-					<progress class="timeline__item__progress-bar" max="5" value="5"></progress>
-					<button class="timeline__item__switch-view">Show Less</button>
+					<progress class="timeline__item__progress-bar " max="5" value="5"></progress>
+					<button class="timeline__item__switch-view">Show More</button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
-      <div class="timeline__item__info">
+      <div class="timeline__item__info is-hidden">
 				<ul class="timeline__item__checklist">
 					
       <li class="timeline__item__checkbox">
@@ -427,9 +435,11 @@
 		</li> <!--  timeline__item  -->
     
 </ol>
+	<script src="js/timeline__item__toggle.js"></script>
 
 
 	</section> <!--  timeline  -->
 
+	</div>
 	</body>
 	</html>

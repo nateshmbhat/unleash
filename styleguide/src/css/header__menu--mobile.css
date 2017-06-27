@@ -1,26 +1,27 @@
 /* header--mobile.css */
 
-.header__nav--mobile {display: none;}
+.header__menu--mobile {display: none;}
 
 @media screen and (max-width: 767px) {
 
 	/* customizing default menu */
-	.header__nav__item {
+	.header__menu__item {
 		margin-right: 0;
 		background-color: #fff;
 	}
-	.header__nav__link {
+	.header__menu__link {
 		display: none;
 	}
-	.header__nav__link--current {
+	.header__menu__link--current {
 		display: block;
+		margin-right: -18px;
 	}
-	.header__nav__link__label--current {
+	.header__menu__link__label--current {
 		display: inline-block;
 		position: relative;
 		padding-right: 18px;
 	}
-	.header__nav__link__label--current::after {
+	.header__menu__link__label--current::after {
 		content: '';
 		position: absolute;
 		right: 0;
@@ -36,13 +37,15 @@
 	.header.is-open {
 		border-bottom: none;
 	}
-	.header__nav--mobile.is-open {
-		transform: translateY(72px);
+	.header__menu--mobile.is-open {
+		display: block;
+		top: 72px;
+		/*transform: translateY(72px);*/
 		box-shadow: 0 30px 30px rgba(220,220,220,.1);
 	}
 
-	.header__nav--mobile {
-		display: block;
+	.header__menu--mobile {
+		display: none;
 		position: absolute;
 		padding: 18px 0;
 		z-index: 10;
@@ -51,23 +54,27 @@
 		width: 100%;
 		background-color: #fff;
 		line-height: 36px;
-		transform: translateY(-100%);
-		transition: transform .3s ease-out;
+		/*transform: translateY(-100%);
+		transition: transform .3s ease-out;*/
 	}
-	.header__nav--mobile .header__nav__item {
+	.header__menu--mobile .header__menu__item {
 		display: block;
 	}
-	.header__nav--mobile .header__nav__link {
+	.header__menu--mobile .header__menu__link {
 		display: block;
 		font-size: 14px;
 		line-height: 36px;
 		text-align: center;
 		border: none;
 	}
-	.header__nav--mobile .header__nav__link__label--current {
+	.header__menu--mobile .header__menu__link--current {
+		margin-right: 0;
+		margin-right: 0;
+	}
+	.header__menu--mobile .header__menu__link__label--current {
 		padding-right: 0;
 	}
-	.header__nav--mobile .header__nav__link__label--current::after {
+	.header__menu--mobile .header__menu__link__label--current::after {
 		display: none;
 	}
 }

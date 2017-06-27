@@ -1,7 +1,9 @@
 /* header__user-menu.css */
 
 .header__user-menu {
+	position: relative;
 	width: 54px;
+	user-select: none;
 }
 .header__user-menu__btn {
 	display: none;
@@ -31,17 +33,43 @@
 }
 
 .header__user-menu__list {
-	display: block;
+	list-style: none;
+	display: none;
 	position: absolute;
 	z-index: 10;
-	top: 0;
-	left: 18px;
-	transform: translateY(-120%);
-	transition: transform .3s ease-out;
+	top: 53px;
+	right: 0;
+	margin: 0;
+	padding: 30px;
+	background-color: #fff;
+	box-shadow: 0 10px 30px rgba(220,220,220,.5);
 }
 .header__user-menu__btn:checked ~ .header__user-menu__list {
-	width: calc(100% - 18px);
-	background-color: #fff;
-	transform: translateY(70px);
-	box-shadow: 0 30px 30px rgba(220,220,220,.1);
+	display: block;
 }
+
+.header__user-menu__item {
+	line-height: 34px;
+}
+.header__user-menu__item--name {
+	font: 700 18px 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #242424;
+}
+.header__user-menu__item--email {
+	font-size: 16px;
+	color: #b8b7bc;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.header__user-menu__item__link {
+	font: 600 14px 'Montserrat', sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #b8b7bc;
+}
+
+
+
+
