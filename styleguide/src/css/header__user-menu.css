@@ -1,0 +1,47 @@
+/* header__user-menu.css */
+
+.header__user-menu {
+	width: 54px;
+}
+.header__user-menu__btn {
+	display: none;
+}
+.header__user-menu__label {
+	display: inline-block;
+	position: relative;
+	font: 700 11px/36px 'Montserrat', sans-serif;
+	text-align: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background-color: #eeddfc;
+	color: #8e15fa;
+	cursor: pointer;
+}
+.header__user-menu__label::after {
+	content: '';
+	position: absolute;
+	right: -18px;
+	top: calc(50% - 2px);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 4px 0 4px;
+	border-color: #eeddfc transparent transparent transparent;
+}
+
+.header__user-menu__list {
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 18px;
+	transform: translateY(-120%);
+	transition: transform .3s ease-out;
+}
+.header__user-menu__btn:checked ~ .header__user-menu__list {
+	width: calc(100% - 18px);
+	background-color: #fff;
+	transform: translateY(70px);
+	box-shadow: 0 30px 30px rgba(220,220,220,.1);
+}

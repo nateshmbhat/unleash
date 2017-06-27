@@ -54,10 +54,11 @@
 
 		}
 
-
 	}
   
-  window.onresize = hideTags;
+	window.addEventListener('resize', function() {
+    hideTags();
+  }, true);
 
 	hideTags();
 

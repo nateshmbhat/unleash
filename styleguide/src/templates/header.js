@@ -30,8 +30,17 @@ module.exports = `
 				</li>
 			</ul>
 		</nav>
-		<button class="header__user-settings">
-			<span class="header__user-settings__label">NO</span>
-		</button>
+		<nav class="header__user-menu">
+			<input type="checkbox" class="header__user-menu__btn" id="header__user-menu__btn">
+			<label class="header__user-menu__label" for="header__user-menu__btn">NO</label>
+			<ul class="header__user-menu__list">
+				<li class="header__user-menu__item">Name</li>
+				<li class="header__user-menu__item">email</li>
+				<li class="header__user-menu__item">Edit Profile</li>
+				<li class="header__user-menu__item">Sign Out</li>
+			</ul>
+		</nav>
+		
+		<script src="js/mobile-menu.js"></script>
 	</header>
 `

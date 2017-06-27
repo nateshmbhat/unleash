@@ -1,6 +1,8 @@
 @charset "UTF-8";
 @import "layout.css";
 @import "header.css";
+@import "header__user-menu.css";
+@import "header--mobile.css";
 @import "profile-recap.css";
 @import "profile-recap__unleash.css";
 @import "timeline__header.css";
