@@ -22,16 +22,16 @@ install:
   - sed -i -e "s,firebase_database_url_value,$FIREBASE_DATABASE_URL,g" config.local.js
   - sed -i -e "s/firebase_storage_bucket_value/$FIREBASE_STORAGE_BUCKET/g" config.local.js
   - sed -i -e "s/firebase_messaging_sender_id_value/$FIREBASE_MESSAGING_SENDER_ID/g" config.local.js
-  - sed -i -e "s,skills_api_url_value,$SKILLS_API_URL,g" config.local.js
-  - sed -i -e "s,goals_api_url_value,$GOALS_API_URL,g" config.local.js
-  - sed -i -e "s,profiles_api_url_value,$PROFILES_API_URL,g" config.local.js
-  - sed -i -e "s,paths_api_url_value,$PATHS_API_URL,g" config.local.js
+  - sed -i -e "s,https://fy5p532pni.execute-api.us-west-2.amazonaws.com/dev/skills,$SKILLS_API_URL,g" config.local.js
+  - sed -i -e "s,http://goals-staging.unleash.x-team.com/api/v1/goals.json,$GOALS_API_URL,g" config.local.js
+  - sed -i -e "s,https://txkaf3ohhf.execute-api.us-west-2.amazonaws.com/staging/profiles,$PROFILES_API_URL,g" config.local.js
+  - sed -i -e "s,http://paths-staging.unleash.x-team.com/api/v1/paths,$PATHS_API_URL,g" config.local.js
   - sed -i -e "s,slack_bot_url_value,$SLACK_BOT_URL,g" config.local.js
   - yarn
 
 script:
   - npm run test:lint
-  # - npm run test
+  - npm run test
 
 after_success:
   - npm run build
