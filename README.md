@@ -90,3 +90,6 @@ In order to run lint please type:
 ```shell
 docker-compose run web yarn test:lint
 ```
+Maintained by the [developers at x-team](https://www.x-team.com) | [developer blog](https://www.x-team.com/blog/)
+
+
