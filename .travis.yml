@@ -40,9 +40,18 @@ deploy:
   - provider: s3
     access_key_id: "$AWS_ACCESS_KEY_ID"
     secret_access_key: "$AWS_SECRET_ACCESS_KEY"
-    bucket: "x-team-unleash-app"
+    bucket: "x-team-unleash-app-staging"
     skip_cleanup: true
     local_dir: build
     region: "us-west-2"
     on:
-      branch: "deployment_#471"
+      branch: develop
+  - provider: s3
+    access_key_id: "$AWS_ACCESS_KEY_ID"
+    secret_access_key: "$AWS_SECRET_ACCESS_KEY"
+    bucket: "x-team-unleash-app-production"
+    skip_cleanup: true
+    local_dir: build
+    region: "us-west-2"
+    on:
+      branch: master
