@@ -22,10 +22,10 @@ function updateVotes(votes, resourceId, vote) {
     votes[resourceId].push(vote);
   }
 
-  return votes;
+  return { ...votes };
 }
 
-function skillsReducer(state = initialState, action) {
+function skillsReducer(state = initialState, action = {}) {
   const { errors = [] } = action;
 
   switch (action.type) {

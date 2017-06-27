@@ -15,5 +15,15 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 export default function configureStore(initialState) {
-  return createStore(rootReducer, initialState, applyMiddlewareConfig);
+  const store = createStore(rootReducer, initialState, applyMiddlewareConfig);
+
+  if (module.hot) {
+    // Enable webpack hot module replacement for reducers
+    module.hot.accept('../reducers/rootReducer', () => {
+      const nextReducer = require('../reducers/rootReducer').default; // eslint-disable-line global-require
+      store.replaceReducer(nextReducer);
+    });
+  }
+
+  return store;
 }

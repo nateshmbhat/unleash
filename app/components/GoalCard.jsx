@@ -223,23 +223,21 @@ class GoalCard extends Component {
     const isMilestone = dueDays >= 10 || goal.level === 4;
 
     return (
-      <Paper style={goalStyle} zDepth={2} onTouchTap={() => this.props.toggleOn(DIALOG_TOGGLE)} >
-        <Loading loading={loading}>
-          <div>
-            {isMilestone && <img src={MilestoneImg} style={styles.milestone} alt="milestone" />}
-            <i className={goal.icon} style={styles.icon} />
-            <span style={styles.title}>{goal.name}</span>
-            <div style={styles.details}>
-              <span style={styles.level}>Lvl {goal.level}</span>
-              <div style={Object.assign({}, styles.status, achieved && styles.achieved)}>
-                <i className={achieved ? 'icon-checkmark' : 'icon-hour-glass'} />
-              </div>
-              <span style={styles.dueDate}><i className="icon-history" /> {dueDays}</span>
+      <Loading loading={loading}>
+        <Paper style={goalStyle} zDepth={2} onTouchTap={() => this.props.toggleOn(DIALOG_TOGGLE)} >
+          {isMilestone && <img src={MilestoneImg} style={styles.milestone} alt="milestone" />}
+          <i className={goal.icon} style={styles.icon} />
+          <span style={styles.title}>{goal.name}</span>
+          <div style={styles.details}>
+            <span style={styles.level}>Lvl {goal.level}</span>
+            <div style={Object.assign({}, styles.status, achieved && styles.achieved)}>
+              <i className={achieved ? 'icon-checkmark' : 'icon-hour-glass'} />
             </div>
+            <span style={styles.dueDate}><i className="icon-history" /> {dueDays}</span>
           </div>
-        </Loading>
-        {this.renderGoalModal()}
-      </Paper>
+          {this.renderGoalModal()}
+        </Paper>
+      </Loading>
     );
   }
 }

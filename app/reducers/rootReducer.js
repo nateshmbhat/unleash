@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { routerReducer } from 'react-router-redux';
 import announcementsReducer from './announcementsReducer';
 import newsReducer from './newsReducer';
 import skillsReducer from './skillsReducer';
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   user: userReducer,
   notifications: notificationsReducer,
   curatedPaths: curatedPathsReducer,
+  routing: routerReducer,
 });
 
 export default rootReducer;

@@ -6,6 +6,7 @@ import ChipInput from 'material-ui-chip-input';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import DatePicker from 'material-ui/DatePicker';
+import FlatButton from 'material-ui/FlatButton';
 import Loading from './Loading';
 import IconSelector from './IconSelector';
 
@@ -62,15 +63,23 @@ class GoalsModal extends React.Component {
     }
 
     return (
-      <DatePicker
-        style={styles.dueDateField}
-        textFieldStyle={styles.textFields}
-        hintText="Due Date"
-        container="inline"
-        mode="landscape"
-        onChange={(event, date) => onFieldChange('dueDate', date)}
-        value={parameters.dueDate ? new Date(parameters.dueDate) : null}
-      />
+      <div style={styles.dueDateContainer}>
+        <DatePicker
+          style={styles.dueDateField}
+          textFieldStyle={styles.textFields}
+          hintText="Due Date"
+          container="inline"
+          mode="landscape"
+          onChange={(event, date) => onFieldChange('dueDate', date)}
+          value={parameters.dueDate ? new Date(parameters.dueDate) : null}
+        />
+        <FlatButton
+          style={styles.dueDateFieldClear}
+          hintText="Clear Due Date"
+          onClick={() => onFieldChange('dueDate', null)}
+          label="Clear"
+        />
+      </div>
     );
   }
 
@@ -179,9 +188,16 @@ styles = {
   textFields: {
     width: '100%',
   },
+  dueDateContainer: {
+    display: 'flex',
+  },
   dueDateField: {
     paddingTop: 20,
-    width: '100%',
+    width: '80%',
+  },
+  dueDateFieldClear: {
+    marginTop: 20,
+    width: '20%',
   },
 };
 
