@@ -71,7 +71,7 @@ describe('Goal Card', () => {
       expect(component.find('GoalsModal').props().extraFields).not.to.equal([]);
     });
 
-    it('should create Remove action when Goal is editable', () => {
+    it('should create "Mark as achieved" and "Remove" actions when Goal is editable', () => {
       renderComponent({ editable: true });
       const modalActions = component.find('GoalsModal').props().modalActions;
       expect(modalActions.length).to.equal(3);
