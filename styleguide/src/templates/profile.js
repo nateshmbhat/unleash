@@ -14,11 +14,13 @@ module.exports = `
 
 				<p class="profile__info__intro">Ad nemo dolore quis architecto ab animi, alias atque maxime! Sequi, fugit reiciendis totam corporis ad aliquid minima iure a fuga numquam?</p>
 
-				`+ skills +`
+				${skills([
+					'HTML', 'Javascript', 'Angular', 'CSS', 'Python', 'React', 'AngularJS', 'SASS', 'LESS'
+				])}
 
 				<a href="" class="profile__info__profile-link">https://lesterboone.com</a>
 
-				`+ socialNetworks +`
+				${socialNetworks}
 
 			</div> <!--  profile__info  -->
 
