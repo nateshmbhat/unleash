@@ -3,7 +3,7 @@ module.exports = `
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Unleash Styleguide</title>
+		<title>Unleash 2.0</title>
 		<link rel="icon" href="images/favicon.ico">
 		<link rel="stylesheet" href="css/main.css">
 	</head>

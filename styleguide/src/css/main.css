@@ -5,8 +5,13 @@
 @import "header__menu--mobile.css";
 @import "header__user-menu.css";
 @import "profile.css";
-@import "profile__social-icons.css";
-@import "profile__skills.css";
+
+@import "o-avatar.css";
+@import "o-profile-info.css";
+@import "o-skill-tags.css";
+@import "o-profile-link.css";
+@import "o-social-icons.css";
+
 @import "profile__unleash.css";
 @import "timeline__header.css";
 @import "timeline__date-label.css";

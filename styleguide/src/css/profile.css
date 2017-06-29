@@ -23,100 +23,9 @@
 	}	
 }
 
-.profile__avatar {
-	border-radius: 50%;
-	overflow: hidden;
-}
-@media screen and (max-width: 767px) {
-	.profile__avatar {
-		min-width: 69px;
-		min-height: 69px;
-		width: 69px;
-		height: 69px;
-		position: absolute;
-		top: 0;
-		left: 18px; /* 18px padding */
-	}
-}
-@media screen and (min-width: 768px) {
-	.profile__avatar {
-		min-width: 141px;
-		min-height: 141px;
-		width: 141px;
-		height: 141px;
-		margin-right: 19px;
-		flex: 0 0 141px;
-	}	
-}
-@media screen and (min-width: 1024px) {
-	.profile__avatar {
-		margin-right: 29px;
-	}	
-}
-
-.profile__avatar__img {
-	max-width: 100%;
-}
-
 
 .profile__info {
 	position: relative;
-}
-
-.profile__info__name {
-	display: inline-block;
-	font: 600 22px/1 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	color: #242424;
-	margin: 8px 0;
-}
-@media screen and (max-width: 767px) {
-	.profile__info__name {
-		margin-left: 83px;
-	}
-}
-@media screen and (min-width: 768px) {
-	.profile__info__name {
-		font-size: 28px;
-		margin: 0;
-	}
-}
-@media screen and (min-width: 1024px) {
-	.profile__info__name {
-		font-size: 34px;
-	}
-}
-
-.profile__info__intro {
-	font: 14px 'Source Sans Pro', sans-serif;
-	color: #6e6d72;
-	margin: 0;
-}
-@media screen and (max-width: 767px) {
-	.profile__info__intro {
-		margin-left: 83px;
-	}
-}
-@media screen and (min-width: 768px) {
-	.profile__info__intro {
-		font-size: 18px;
-		margin: 20px 0 23px;
-	}
-}
-
-@media screen and (max-width: 767px) {
-	.profile__info__profile-link {
-		display: none;
-	}
-}
-@media screen and (min-width: 768px) {
-	.profile__info__profile-link {
-		font: 16px 'Source Sans Pro', sans-serif;
-		color: #2096ef;
-	}
-}
-
-.profile__info {
 	overflow: hidden;
 }
 @media screen and (min-width: 768px) {
@@ -138,17 +47,3 @@
 }
 
 
-@media screen and (max-width: 767px) {
-	.profile__info__profile-link {
-		display: none;
-	}
-}
-@media screen and (min-width: 768px) {
-	.profile__info__profile-link {
-		display: inline-block;
-		font: 16px 'Source Sans Pro', sans-serif;
-		text-decoration: none;
-		color: #2096ef;	
-		margin: 20px 0;
-	}	
-}

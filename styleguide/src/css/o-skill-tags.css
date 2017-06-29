@@ -1,4 +1,4 @@
-.profile__skills {
+.o-skill-tags {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -6,19 +6,19 @@
 	position: relative;
 }
 @media screen and (max-width: 767px) {
-	.profile__skills {
+	.o-skill-tags {
 		margin-top: 30px;
 	}
 }
 
-.profile__skills--unfolded {
+.js-skill-tags--unfolded {
 	flex-wrap: wrap;
 }
-.profile__skills--unfolded .profile__skill {
+.js-skill-tags--unfolded .js-skill-tags__skill {
 	display: inline-block;
 }
 
-.profile__skills::after {
+.o-skill-tags::after {
 	content: attr(data-content);
 	position: absolute;
 	right: -15px;
@@ -28,18 +28,18 @@
 	cursor: pointer;
 }
 
-.profile__skill {
+.o-skill-tags__skill {
 	display: inline-block;
 	margin-bottom: 5px;
 }
-.profile__skill:not(:last-child) {
+.o-skill-tags__skill:not(:last-child) {
 	margin-right: 6px;
 }
-.profile__skill--hidden {
+.js-skill-tags__skill--hidden {
 	display: none;
 }
 
-.profile__skill__link {
+.o-skill-tags__skill__link {
 	display: inline-block;
 	font-size: 13px;
 	text-decoration: none;

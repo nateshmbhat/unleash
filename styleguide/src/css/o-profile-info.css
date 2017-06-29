@@ -1,0 +1,40 @@
+.o-profile-info__name {
+	display: inline-block;
+	font: 600 22px/1 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	color: #242424;
+	margin: 8px 0;
+}
+@media screen and (max-width: 767px) {
+	.o-profile-info__name {
+		margin-left: 83px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.o-profile-info__name {
+		font-size: 28px;
+		margin: 0;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.o-profile-info__name {
+		font-size: 34px;
+	}
+}
+
+.o-profile-info__intro {
+	font: 14px 'Source Sans Pro', sans-serif;
+	color: #6e6d72;
+	margin: 0;
+}
+@media screen and (max-width: 767px) {
+	.o-profile-info__intro {
+		margin-left: 83px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.o-profile-info__intro {
+		font-size: 18px;
+		margin: 20px 0 23px;
+	}
+}

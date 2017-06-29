@@ -1,8 +1,8 @@
-const avatar = require('../templates/objects/o-avatar')
-const info = require('../templates/objects/o-profile-info')
-const skills = require('../templates/objects/o-skill-tags')
-const link = require('../templates/objects/o-profile-link')
-const socialNetworks = require('../templates/objects/o-social-icons')
+const avatar = require('../objects/o-avatar')
+const info = require('../objects/o-profile-info')
+const skills = require('../objects/o-skill-tags')
+const link = require('../objects/o-profile-link')
+const socialNetworks = require('../objects/o-social-icons')
 
 module.exports = `
 	<section class="profile">

@@ -7,16 +7,16 @@
 	var windowWidth = window.innerWidth;
 
 	function socialIcons() {
-		var name = document.querySelector('.profile__info__name').offsetWidth;
-		var section = document.querySelector('.profile__info').offsetWidth;
+		var name = document.querySelector('.js-profile-info__name').offsetWidth;
+		var section = document.querySelector('.js-profile__info').offsetWidth;
 		var width = name + 180; // 164px icons width
 		if (section > width) {
 			var margin = name + 20;
 			var left = margin.toString();
-			document.querySelector('.profile__social-icons').classList.add('profile__social-icons--top');
-			document.querySelector('.profile__social-icons').style.left = left+"px";
+			document.querySelector('.js-social-icons').classList.add('js-social-icons--top');
+			document.querySelector('.js-social-icons').style.left = left+"px";
 		} else {
-			document.querySelector('.profile__social-icons').classList.remove('profile__social-icons--top');
+			document.querySelector('.js-social-icons').classList.remove('js-social-icons--top');
 		}
 	}
 
