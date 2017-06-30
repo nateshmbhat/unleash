@@ -1,0 +1,36 @@
+.o-add-goal {
+	position: fixed;
+	bottom: 18px;
+	right: 18px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #f63954;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+	.o-add-goal {
+		bottom: 30px;
+		right: 30px;
+	}
+}
+
+.o-add-goal-modal {
+	position: fixed;
+	width: 300px;
+	height: 100px;
+	top: calc(50% - 100px);
+	left: calc(50% - 150px);
+	transition: .3s opacity ease-out;
+	background-color: #fff;
+	box-shadow: 0 0 30px rgba(200,200,200,.75);
+	padding: 30px;
+}
+.o-add-goal-modal.is-hidden {
+	visibility: hidden;
+	opacity: 0
+}
