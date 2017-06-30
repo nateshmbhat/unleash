@@ -60,7 +60,7 @@
   font: 600 22px/1 'Montserrat',sans-serif;
   text-transform: uppercase;
   color: #34323b;
-  margin: 0 auto 1em;
+  margin: 0 auto 20px;
 }
 .o-add-goal__modal__form {
 	overflow: hidden;
@@ -74,7 +74,7 @@
   color: #9a9d9e;
   padding: 0 11px;
   border: 2px solid #e9edee;
-  margin-bottom: 4px;
+  margin-bottom: 15px;
   width: calc(100% - 26px); /* (11px padding + 2px border) * left/right */
 }
 .o-add-goal__modal__submit {
