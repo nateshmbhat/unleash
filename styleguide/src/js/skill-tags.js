@@ -8,8 +8,6 @@
 
   function hideTags() { 
 		
-		console.log('running hideTags()');
-
   	// display all tags
 		for (var i = 0; i < totalTags; i++) {
 			tags[i].classList.remove('js-skill-tags__skill--hidden');

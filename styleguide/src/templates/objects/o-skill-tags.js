@@ -12,8 +12,7 @@ function renderSkills (skills) {
 module.exports = function (props) {
   return `
 <ul class="o-skill-tags js-skill-tags" data-content="">
-	${renderSkills(props)}
+	${renderSkills(props.tags)}
 </ul>
-<script src="js/skill-tags.js"></script>
 `
 }

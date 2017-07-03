@@ -17,9 +17,9 @@ module.exports = `
 			</div>
 		</section>
 		<section class="tags-cloud">
-			${skills(
-				['Javascript', 'React', 'Angular', 'CSS']
-			)}
+			${skills({
+				tags: ['Javascript', 'React', 'Angular', 'CSS']
+			})}
 		</section>
 		<section class="profiles__profile">
 			${profile}

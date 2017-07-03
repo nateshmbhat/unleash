@@ -11,6 +11,8 @@
 	}
 }
 
+/* hide/show tags via /js/skill-tags.js */
+.o-skill-tags,
 .js-skill-tags--unfolded {
 	flex-wrap: wrap;
 }

@@ -14,9 +14,9 @@ module.exports = `
 			
 			${info}	
 
-			${skills([
-				'HTML', 'Javascript', 'Angular', 'CSS', 'Python', 'React', 'AngularJS', 'SASS', 'LESS'
-			])}
+			${skills({
+				tags: ['HTML', 'Javascript', 'Angular', 'CSS', 'Python', 'React', 'AngularJS', 'SASS', 'LESS']
+			})}
 
 			${link}
 
