@@ -1,4 +1,3 @@
-import size from 'lodash/size';
 import httpClient from '../services/httpClient';
 import config from '../../config';
 
@@ -18,18 +17,6 @@ const notifyAchieved = (params) => {
         title: goal.name || '',
         title_link: profileLink,
         text: goal.description || '',
-        fields: [
-          {
-            title: 'Level',
-            value: goal.level || 'none',
-            short: true,
-          },
-          {
-            title: 'Comments',
-            value: size(goal.comments) || '0',
-            short: true,
-          },
-        ],
         thumb_url: user.picture,
       },
     ],
