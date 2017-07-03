@@ -62,23 +62,23 @@
   	<div class="wrap">
   	
 	<section class="profile">
+	
 		
-			
 <div class="o-avatar">
 	<img src="images/avatar.png" alt="" class="o-avatar__img">
 </div>
 
 
-			<div class="profile__info js-profile__info">
-				
-				
+		<div class="profile__info js-profile__info">
+			
+			
 <div class="o-profile-info js-profile-info">
 	<h2 class="o-profile-info__name js-profile-info__name">Lester Boone</h2>
 	<p class="o-profile-info__intro">Ad nemo dolore quis architecto ab animi, alias atque maxime! Sequi, fugit reiciendis totam corporis ad aliquid minima iure a fuga numquam?</p>
 </div>
 	
 
-				
+			
 <ul class="o-skill-tags js-skill-tags" data-content="">
 	
       	<li class="o-skill-tags__skill js-skill-tags__skill">
@@ -126,16 +126,15 @@
 				</li>
       
 </ul>
-<script src="js/skill-tags.js"></script>
 
 
-				
+			
 <div class="o-profile-link">
 	<a href="#" class="o-profile-link__link">https://lesterboone.com</a>
 </div>
 
 
-				
+			
 <ul class="o-social-icons js-social-icons">
 	<li class="o-social-icons__icon">
 		<a href="" class="o-social-icons__link o-social-icons__link--facebook">
@@ -176,33 +175,36 @@
 <script src="js/social-icons.js"></script>
 
 
-			</div> <!--  profile__info  -->
+		</div> <!--  profile__info  -->
 
-			<div class="profile__unleash">
+		
+<div class="unleash-tempo">
 
-				<h4 class="profile__unleash__title">Unleash Tempo</h4>
+	<h4 class="unleash-tempo__title">Unleash Tempo</h4>
 
-				<div class="profile__unleash__graph">
-					<!-- canvas -->
-					<img class="profile__unleash__graph__img" src="images/graph.png" alt="">
-				</div>
+	<div class="unleash-tempo__graph">
+		<!-- canvas -->
+		<img class="unleash-tempo__graph__img" src="images/graph.png" alt="">
+	</div>
 
-				<ul class="profile__unleash__goals">
-					<li class="profile__unleash__goal">
-						<span class="profile__unleash__goal__label">Paths</span>
-						<span class="profile__unleash__goal__amount">8</span>
-					</li>
-					<li class="profile__unleash__goal">
-						<span class="profile__unleash__goal__label">Open Steps</span>
-						<span class="profile__unleash__goal__amount">54</span>
-					</li>
-					<li class="profile__unleash__goal">
-						<span class="profile__unleash__goal__label">Finished Steps</span>
-						<span class="profile__unleash__goal__amount">186</span>
-					</li>
-				</ul>
+	<ul class="unleash-tempo__goals">
+		<li class="unleash-tempo__goal">
+			<span class="unleash-tempo__goal__label">Paths</span>
+			<span class="unleash-tempo__goal__amount">8</span>
+		</li>
+		<li class="unleash-tempo__goal">
+			<span class="unleash-tempo__goal__label">Open Steps</span>
+			<span class="unleash-tempo__goal__amount">54</span>
+		</li>
+		<li class="unleash-tempo__goal">
+			<span class="unleash-tempo__goal__label">Finished Steps</span>
+			<span class="unleash-tempo__goal__amount">186</span>
+		</li>
+	</ul>
 
-			</div> <!--  profile__unleash  -->
+</div> <!--  unleash-tempo  -->
+
+		
 	</section>
 
   	
@@ -211,12 +213,6 @@
 <header class="timeline__header">
 	<div class="timeline__search">
 		<input class="timeline__search__input" type="search" placeholder="Search">
-	</div>
-	<div class="timeline__sortby">
-		<select name="" id="" class="timeline__sortby__dropdown">
-			<option class="sortby__dropdown__option" value="byDate" selected>Sort by date</option>
-			<option class="sortby__dropdown__option" value="byName">Sort by name</option>
-		</select>
 	</div>
 </header>
 
@@ -240,7 +236,7 @@
 						<span class="timeline__item__steps__total">4</span>
 					</div>
 					<progress class="timeline__item__progress-bar timeline__item__progress-bar--red" max="4" value="1"></progress>
-					<button class="timeline__item__switch-view">Show More</button>
+					<button class="timeline__item__switch-view"></button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
       <div class="timeline__item__info is-hidden">
@@ -303,7 +299,7 @@
 						<span class="timeline__item__steps__total">8</span>
 					</div>
 					<progress class="timeline__item__progress-bar " max="8" value="6"></progress>
-					<button class="timeline__item__switch-view">Show More</button>
+					<button class="timeline__item__switch-view"></button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
       <div class="timeline__item__info is-hidden">
@@ -411,7 +407,7 @@
 						<span class="timeline__item__steps__total">5</span>
 					</div>
 					<progress class="timeline__item__progress-bar " max="5" value="5"></progress>
-					<button class="timeline__item__switch-view">Show More</button>
+					<button class="timeline__item__switch-view"></button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
       <div class="timeline__item__info is-hidden">
@@ -486,8 +482,8 @@
 			<p class="o-add-goal__modal__title">Add a Goal</p>
 			<form action="" class="o-add-goal__modal__form">
 				<input class="o-add-goal__modal__input" type="text" placeholder="Goal name">
-				<textarea class="o-add-goal__modal__input" placeholder="Goal description"></textarea>
-				<input type="submit" class="o-add-goal__modal__submit" value="Add">
+				<textarea class="o-add-goal__modal__input o-add-goal__modal__textarea" placeholder="Goal description"></textarea>
+				<input type="submit" class="o-add-goal__modal__submit js-add-goal__modal__submit" value="Add">
 			</form>
 		</div>
 	</div>

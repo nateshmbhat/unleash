@@ -14,6 +14,5 @@ module.exports = function (props) {
 <ul class="o-skill-tags js-skill-tags" data-content="">
 	${renderSkills(props)}
 </ul>
-<script src="js/skill-tags.js"></script>
 `
 }

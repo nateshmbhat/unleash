@@ -56,18 +56,3 @@
 .timeline__search__input::placeholder {
 	color: #9a9d9e;
 }
-
-.timeline__sortby {
-	background-color: #fff;
-	width: 11rem;
-	text-align: right;
-}
-.timeline__sortby__dropdown {
-	font: 14px/2 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	background-color: transparent;
-	color: #9a9d9e;
-	border: none;
-	padding: 0 11px;
-	min-width: 8rem;
-}

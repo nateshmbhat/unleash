@@ -27,7 +27,7 @@ function renderItems (items) {
 						<span class="timeline__item__steps__total">${item.totalSteps}</span>
 					</div>
 					<progress class="timeline__item__progress-bar ${((item.currentSteps/item.totalSteps < .3) ? 'timeline__item__progress-bar--red' : '')}" max="${item.totalSteps}" value="${item.currentSteps}"></progress>
-					<button class="timeline__item__switch-view">Show More</button>
+					<button class="timeline__item__switch-view"></button>
 				</div>
       </div>  <!--  timeline__item__intro  -->
       <div class="timeline__item__info is-hidden">

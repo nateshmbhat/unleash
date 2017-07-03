@@ -8,8 +8,8 @@ module.exports = `
 			<p class="o-add-goal__modal__title">Add a Goal</p>
 			<form action="" class="o-add-goal__modal__form">
 				<input class="o-add-goal__modal__input" type="text" placeholder="Goal name">
-				<textarea class="o-add-goal__modal__input" placeholder="Goal description"></textarea>
-				<input type="submit" class="o-add-goal__modal__submit" value="Add">
+				<textarea class="o-add-goal__modal__input o-add-goal__modal__textarea" placeholder="Goal description"></textarea>
+				<input type="submit" class="o-add-goal__modal__submit js-add-goal__modal__submit" value="Add">
 			</form>
 		</div>
 	</div>
