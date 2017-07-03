@@ -5,6 +5,7 @@
 @import "header__menu--mobile.css";
 @import "header__user-menu.css";
 @import "profile.css";
+@import "profile-recap.css";
 
 @import "o-avatar.css";
 @import "o-profile-info.css";
@@ -19,4 +20,6 @@
 @import "timeline__item.css";
 @import "timeline__item__checklist.css";
 
+@import "profiles-search.css";
+@import "tags-cloud.css";
 @import "o-add-goal.css";

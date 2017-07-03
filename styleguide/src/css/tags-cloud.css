@@ -1,0 +1,37 @@
+.tags-cloud {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0; 
+}
+.tags-cloud__clear {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 72px;
+	min-height: 58px;
+	border-left: 1px solid #d8dadd;
+}
+.tags-cloud__clear__btn {
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	background-color: #d8dadd;
+	color: #fff;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	border: none;
+	padding: 0;
+	margin: 2px;
+	cursor: pointer;
+}
+
+.js-skill-tags__btn {
+	color: #9a9d9e;
+	border-color: #d8dadd;
+	transition: color .2s ease-out, border-color .2s ease-out;
+}
+.js-skill-tags__btn.is-active {
+	color: #f33c57;
+	border-color: #f33c57;
+}

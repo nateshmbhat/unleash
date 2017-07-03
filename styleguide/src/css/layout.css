@@ -20,6 +20,9 @@ body {
   background: #34323b;
   color: #fff;
 }
+:focus {
+	outline-color: #ff5964;
+}
 .wrap {
 	max-width: 1180px;
 	margin: 0 auto;

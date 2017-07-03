@@ -1,0 +1,12 @@
+.profiles__search {
+	height: 70px;
+	border-bottom: 1px solid #d8dadd;
+}
+.profiles__search .timeline__search {
+	width: 100%;
+}
+.profiles__search .timeline__search__input {
+	margin-top: 3px;
+	width: 100%;
+	line-height: 70px;
+}

@@ -3,8 +3,7 @@ const header = require('../templates/header')
 const timeline = require('../templates/timeline')
 const footer = require('../templates/footer')
 
-const skills = require('../templates/objects/o-skill-tags')
-
+const skills = require('../templates/tags-cloud')
 const profile = require('../templates/components/c-profile')
 
 module.exports = `
@@ -16,11 +15,7 @@ module.exports = `
 				<input class="timeline__search__input" type="search" placeholder="Search by name">
 			</div>
 		</section>
-		<section class="tags-cloud">
-			${skills({
-				tags: ['Javascript', 'React', 'Angular', 'CSS']
-			})}
-		</section>
+		${skills}
 		<section class="profiles__profile">
 			${profile}
 		</section>

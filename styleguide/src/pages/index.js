@@ -11,7 +11,7 @@ module.exports = `
 	${header({currentPage: 'home'})}
 	<div class="wrap">
 
-	<section class="profile">
+	<section class="profile-recap">
 		${profile}
 		${unleash}
 	</section>

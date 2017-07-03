@@ -3,26 +3,7 @@
 .profile {
 	position: relative;
 	display: flex;
-	margin: 26px 0 36px;
 }
-@media screen and (max-width: 767px) {
-	.profile {
-		flex-direction: column;
-		padding: 0 18px;
-	}	
-}
-@media screen and (min-width: 768px) {
-	.profile {
-		padding: 0 30px;
-		margin: 40px 0 50px;
-	}	
-}
-@media screen and (min-width: 1024px) {
-	.profile {
-		margin: 60px 0;
-	}	
-}
-
 
 .profile__info {
 	position: relative;
