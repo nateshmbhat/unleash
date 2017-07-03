@@ -15,6 +15,5 @@ module.exports = `
 			${link}
 			${socialNetworks}
 		</div> <!--  profile__info  -->
-		<script src="js/skill-tags.js"></script>
 	</section>
 `

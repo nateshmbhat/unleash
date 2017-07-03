@@ -7,6 +7,8 @@
 	var totalTags = tags.length;
 
   function hideTags() { 
+		
+		console.log('running hideTags()');
 
   	// display all tags
 		for (var i = 0; i < totalTags; i++) {
