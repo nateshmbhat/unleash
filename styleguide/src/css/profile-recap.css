@@ -6,12 +6,10 @@
 @media screen and (max-width: 767px) {
 	.profile-recap {
 		flex-direction: column;
-		padding: 0 18px;
 	}	
 }
 @media screen and (min-width: 768px) {
 	.profile-recap {
-		padding: 0 30px;
 		margin: 40px 0 50px;
 	}	
 }

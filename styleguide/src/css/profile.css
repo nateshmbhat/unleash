@@ -18,7 +18,6 @@
 	.profile__info {
 		padding-bottom: 35px;
 		position: relative;
-		max-width: 40%;
 	}
 }
 @media screen and (min-width: 1024px) {

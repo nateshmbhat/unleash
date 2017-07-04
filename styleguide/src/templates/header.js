@@ -3,7 +3,7 @@ const userMenu = require('../templates/header__user-menu')
 
 module.exports = function (props) {
   return `
-		<header class="header">
+		<header class="header js-header">
 			<a href="#" class="header__logo">
 				<img src="images/logo.png" alt="Unleash" class="header__logo__img">
 				<span class="header__logo__text">Unleash</span>

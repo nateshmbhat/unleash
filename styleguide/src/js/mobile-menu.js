@@ -4,17 +4,19 @@
 	var windowWidth = window.innerWidth;
 	
 	function mobileMenu() {
+
+		// duplicate DOM menu
 		var mobileMenu = document.querySelector('.header__menu--mobile');
 		if (!mobileMenu) {
-			var menu = document.querySelector('.header__menu');
+			var menu = document.querySelector('.js-header__menu');
 			var menuCloned = menu.cloneNode(true);
-			menuCloned.className = 'header__menu--mobile';
+			menuCloned.classList.add('header__menu--mobile');
 			document.querySelector('body').appendChild(menuCloned);
 		}
 		
 		// toggle mobile menu
-		document.querySelector('.header__menu__link__label--current').addEventListener("click", function(e){
-			e.preventDefault;
+		document.querySelector('.js-menu-toggle').addEventListener("click", function(e){
+			e.preventDefault();
 	  	document.querySelector('.header').classList.toggle('is-open');
 	  	document.querySelector('.header__menu--mobile').classList.toggle('is-open');
 	  });

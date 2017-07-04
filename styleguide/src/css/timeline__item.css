@@ -117,7 +117,7 @@
 	font: 14px 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	color: #9a9d9e;
-	max-width: 90px;
+	min-width: 90px;
 }
 .timeline__item__steps__label {
 	display: inline-block;

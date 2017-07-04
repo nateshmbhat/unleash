@@ -1,14 +1,16 @@
 .tags-cloud {
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 0; 
+	margin: 40px 0;
+}
+.tags-cloud__tags {
+	margin: 0;
 }
 .tags-cloud__clear {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-width: 72px;
-	min-height: 58px;
+	padding: 20px 25px;
 	border-left: 1px solid #d8dadd;
 }
 .tags-cloud__clear__btn {
@@ -22,14 +24,14 @@
 	height: 20px;
 	border: none;
 	padding: 0;
-	margin: 2px;
+	margin: 0;
 	cursor: pointer;
 }
 
 .js-skill-tags__btn {
 	color: #9a9d9e;
 	border-color: #d8dadd;
-	transition: color .2s ease-out, border-color .2s ease-out;
+	transition: color .1s ease-out, border-color .1s ease-out;
 }
 .js-skill-tags__btn.is-active {
 	color: #f33c57;
