@@ -34,9 +34,10 @@ function renderItems (items) {
 				<ul class="timeline__item__checklist">
 					${renderChecklist(item.checklist)}
 					<li class="timeline__item__addnew">
-						<button class="timeline__item__addnew__btn">
+						<button class="timeline__item__addnew__btn js-add-new-step">
 							<span class="timeline__item__addnew__btn__icon">+</span> add a new step
 						</button>
+						<script src="js/add-new-step.js"></script>
 					</li>
 				</ul>
 			</div> <!--  timeline__item__info  -->

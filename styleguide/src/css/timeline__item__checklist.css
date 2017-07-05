@@ -122,7 +122,8 @@
 	color: #b8b7bc;
 }
 
-.timeline__item__checkbox__label {
+.timeline__item__checkbox__label,
+.timeline__item__checkbox__edit {
 	display: block;
 	font-size: 16px;
 	line-height: 1;
@@ -130,6 +131,13 @@
 	color: #34323b;
 	padding-right: 30px;
 	margin-left: 5px;
+}
+.timeline__item__checkbox__edit {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 30px;
+	border: 2px solid #e9edee;
+	padding: 0 30px 0 5px;
+	width: 100%;
 }
 
 
