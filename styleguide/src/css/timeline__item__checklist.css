@@ -1,7 +1,10 @@
 /* timeline__item__checklist.css */
 
-.timeline__item__info.is-hidden {
+.timeline__item__info {
 	display: none;
+}
+.timeline__item.is-open .timeline__item__info {
+	display: block;
 }
 
 /* Desktop layout */

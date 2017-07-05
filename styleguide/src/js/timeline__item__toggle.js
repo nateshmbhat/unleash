@@ -2,12 +2,11 @@
   "use strict";
 	
 	// toggle mobile menu
-	var buttons = document.querySelectorAll('.timeline__item__switch-view');
+	var buttons = document.querySelectorAll('.js-switch-view');
 	for (var i=0; i<buttons.length; i++) {
 		buttons[i].addEventListener("click", function(e){
-			e.preventDefault;
 			e.target.classList.toggle('is-open');
-			e.target.parentNode.parentNode.nextSibling.classList.toggle('is-hidden');
+			e.target.parentNode.parentNode.parentNode.classList.toggle('is-open');
 		});
 	}
 
