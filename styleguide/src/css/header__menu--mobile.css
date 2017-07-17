@@ -14,7 +14,7 @@
 	}
 	.header__menu__link--current {
 		display: block;
-		margin-right: -18px;
+		margin-right: -36px;
 	}
 	.header__menu__link__label--current {
 		display: inline-block;
@@ -54,8 +54,6 @@
 		width: 100%;
 		background-color: #fff;
 		line-height: 36px;
-		/*transform: translateY(-100%);
-		transition: transform .3s ease-out;*/
 	}
 	.header__menu--mobile .header__menu__item {
 		display: block;
