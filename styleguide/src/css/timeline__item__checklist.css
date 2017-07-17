@@ -109,6 +109,7 @@
 	font-size: 20px;
 	vertical-align: middle;
 }
+
 .timeline__item__checkbox:hover .timeline__item__checkbox__input:not(:checked)::after {
 	color: #5fcf21;
 }
@@ -140,8 +141,17 @@
 	width: 100%;
 }
 
+/* disabled checkboxes */
+.timeline__item__checkbox:hover .timeline__item__checkbox__input:disabled::after,
+.timeline__item__checkbox__input:disabled::after {
+	content: '';
+}
+
 
 /* add a new step button */
+.timeline__item__addnew.is-hidden {
+	display: none;
+}
 .timeline__item__addnew {
 	margin-left: -8px;
 }
