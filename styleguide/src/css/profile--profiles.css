@@ -1,0 +1,53 @@
+/* Profiles page */
+@media screen and (min-width: 768px) {
+	.wrap--profiles {
+		padding: 0 28px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.wrap--profiles {
+		max-width: 768px;
+	}
+}
+.profile--profiles {
+	border: 1px solid #d8dadd;
+	padding: 30px;
+	margin-bottom: 10px;
+}
+.profile__info--profiles {
+	position: relative;
+	margin-right: 0;
+	width: 100%;
+}
+.profile__info--profiles .o-profile-info__name {
+	font-size: 24px;
+}
+.profile__info--profiles .o-profile-info {
+	max-width: 60%;
+	margin-top: 5px;
+}
+.profile__info--profiles .o-skill-tags {
+	max-width: 40%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	justify-content: flex-end;
+}
+.profile__info--profiles .o-skill-tags__skill:not(:last-child) {
+	margin-right: 0;
+}
+.profile__info--profiles .o-skill-tags__skill {
+	margin-left: 6px;
+}
+.profile__info--profiles .o-social-icons {
+	max-width: 40%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: auto;
+}
+@media screen and (min-width: 768px) {
+	.profile__info--profiles .o-profile-link__link {
+		margin: 0;
+	}	
+}

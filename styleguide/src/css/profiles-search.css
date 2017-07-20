@@ -2,7 +2,7 @@
 	height: 70px;
 }
 .profiles__search .timeline__search {
-	width: 100%;
+	width: calc(100% - 16px);
 	border-bottom: 1px solid #d8dadd;
 }
 .profiles__search .timeline__search__input {

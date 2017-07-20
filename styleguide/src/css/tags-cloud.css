@@ -4,14 +4,20 @@
 	margin: 40px 0;
 }
 .tags-cloud__tags {
-	margin: 0;
+	margin: 0 0 -5px;
 }
 .tags-cloud__clear {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 25px;
+	padding: 20px 0 20px 20px;
 	border-left: 1px solid #d8dadd;
+}
+@media screen and (min-width: 768px) {
+	.tags-cloud__clear {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 }
 .tags-cloud__clear__btn {
 	font-size: 18px;

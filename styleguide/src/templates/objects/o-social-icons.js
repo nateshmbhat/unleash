@@ -36,5 +36,4 @@ module.exports = `
 		</a>
 	</li>
 </ul>
-<script src="js/social-icons.js"></script>
 `

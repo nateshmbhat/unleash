@@ -16,6 +16,13 @@
 .js-skill-tags--unfolded {
 	flex-wrap: wrap;
 }
+@media screen and (max-width: 767px) {
+	.o-skill-tags,
+	.js-skill-tags--unfolded {
+		justify-content: flex-end;
+		padding-right: 20px;
+	}
+}
 .js-skill-tags--unfolded .js-skill-tags__skill {
 	display: inline-block;
 }
@@ -34,9 +41,17 @@
 	display: inline-block;
 	margin-bottom: 5px;
 }
-.o-skill-tags__skill:not(:last-child) {
-	margin-right: 6px;
+@media screen and (max-width: 767px) {
+	.o-skill-tags__skill {
+		margin-left: 6px;
+	}	
 }
+@media screen and (min-width: 768px) {
+	.o-skill-tags__skill:not(:last-child) {
+		margin-right: 6px;
+	}	
+}
+
 .js-skill-tags__skill--hidden {
 	display: none;
 }

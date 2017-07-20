@@ -43,14 +43,20 @@
 }
 .o-add-goal__modal {
 	position: fixed;
-	width: 400px;
+	width: calc(100% - 100px);
 	top: 20%;
-	left: calc(50% - 200px);
+	left: 20px;
 	transition: .3s opacity ease-out;
 	background-color: #fff;
 	box-shadow: 0 0 30px rgba(200,200,200,.75);
 	padding: 30px;
 	z-index: 1002;
+}
+@media screen and (min-width: 460px) {
+	.o-add-goal__modal {
+		width: 400px;
+		left: calc(50% - 230px);
+	}
 }
 .js-add-goal__modal.is-hidden {
 	visibility: hidden;

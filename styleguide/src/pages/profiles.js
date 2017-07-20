@@ -4,12 +4,12 @@ const timeline = require('../templates/timeline')
 const footer = require('../templates/footer')
 
 const skills = require('../templates/tags-cloud')
-const profile = require('../templates/components/c-profile')
+const profile = require('../templates/components/profiles-profile')
 
 module.exports = `
 	${head}
 	${header({currentPage: 'profiles'})}
-	<div class="wrap">
+	<div class="wrap wrap--profiles">
 		<section class="profiles__search">
 			<div class="timeline__search">
 				<input class="timeline__search__input" type="search" placeholder="Search by name">
@@ -17,6 +17,8 @@ module.exports = `
 		</section>
 		${skills}
 		<section class="profiles__profile">
+			${profile}
+			${profile}
 			${profile}
 		</section>
 	${footer}

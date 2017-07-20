@@ -13,6 +13,7 @@ module.exports = `
 
 	<section class="profile-recap">
 		${profile}
+		<script src="js/social-icons.js"></script>
 		${unleash}
 	</section>
 	
