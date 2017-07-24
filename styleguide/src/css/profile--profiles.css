@@ -2,10 +2,6 @@
 @media screen and (min-width: 768px) {
 	.wrap--profiles {
 		padding: 0 28px;
-	}
-}
-@media screen and (min-width: 1024px) {
-	.wrap--profiles {
 		max-width: 768px;
 	}
 }
@@ -14,39 +10,72 @@
 	padding: 30px;
 	margin-bottom: 10px;
 }
+@media screen and (max-width: 767px) {
+	.profile--profiles {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+	}
+}
 .profile__info--profiles {
 	position: relative;
 	margin-right: 0;
 	width: 100%;
 }
+
+.profile--profiles .o-avatar {
+	position: relative;
+}
+
 .profile__info--profiles .o-profile-info__name {
 	font-size: 24px;
 }
-.profile__info--profiles .o-profile-info {
-	max-width: 60%;
-	margin-top: 5px;
+
+@media screen and (max-width: 767px) {
+	.profile__info--profiles .o-profile-link__link {
+		display: block;
+		font-size: 14px;
+		margin: 20px 0 0;
+	}
+	.profile__info--profiles .o-social-icons {
+		display: inline-flex;
+	}
+	.profile__info--profiles .o-profile-info__name,
+	.profile__info--profiles .o-profile-info__intro {
+		margin-left: 0;
+	}
 }
-.profile__info--profiles .o-skill-tags {
-	max-width: 40%;
-	position: absolute;
-	top: 0;
-	right: 0;
-	justify-content: flex-end;
-}
-.profile__info--profiles .o-skill-tags__skill:not(:last-child) {
-	margin-right: 0;
-}
-.profile__info--profiles .o-skill-tags__skill {
-	margin-left: 6px;
-}
-.profile__info--profiles .o-social-icons {
-	max-width: 40%;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	left: auto;
+@media screen and (max-width: 767px) {
+	.profile__info--profiles .o-skill-tags {
+		justify-content: center;
+		margin-bottom: 20px;
+	}
 }
 @media screen and (min-width: 768px) {
+	.profile__info--profiles .o-profile-info {
+		max-width: 60%;
+		margin-top: 5px;
+	}
+	.profile__info--profiles .o-skill-tags {
+		max-width: 40%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		justify-content: flex-end;
+	}
+	.profile__info--profiles .o-skill-tags__skill:not(:last-child) {
+		margin-right: 0;
+	}
+	.profile__info--profiles .o-skill-tags__skill {
+		margin-left: 6px;
+	}
+	.profile__info--profiles .o-social-icons {
+		max-width: 40%;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: auto;
+	}
 	.profile__info--profiles .o-profile-link__link {
 		margin: 0;
 	}	

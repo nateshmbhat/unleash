@@ -9,10 +9,10 @@ module.exports = `
 		${avatar}
 		<div class="profile__info profile__info--profiles js-profile__info">
 			${info}	
+			${link}
 			${skills({
 				tags: ['HTML', 'Javascript', 'Angular', 'Python', 'React', 'SASS', 'LESS']
 			})}
-			${link}
 			${socialNetworks}
 		</div> <!--  profile__info  -->
 	</div>

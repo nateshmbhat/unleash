@@ -3,17 +3,16 @@
 		display: none;
 	}
 }
-@media screen and (min-width: 768px) {
-	.o-social-icons {
-		display: inline-flex;
-		align-items: center;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-	}
-	.o-social-icons__icon:not(:last-child) {
-		margin-right: 20px;
-	}
+
+.o-social-icons {
+	display: inline-flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.o-social-icons__icon:not(:last-child) {
+	margin-right: 20px;
 }
 
 /* if there's space, icons are placed alongside the name via js/social-icons.js */
