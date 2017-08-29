@@ -6336,9 +6336,9 @@ uniqs@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/uniqs/-/uniqs-2.0.0.tgz#ffede4b36b25290696e6e165d4a59edb998e6b02"
 
-unleash-styles@^1.0.19:
-  version "1.0.19"
-  resolved "https://registry.yarnpkg.com/unleash-styles/-/unleash-styles-1.0.19.tgz#d48f38a15c5d4bc19644d3770cd8257acc317e0b"
+unleash-styles@^1.0.26:
+  version "1.0.26"
+  resolved "https://registry.yarnpkg.com/unleash-styles/-/unleash-styles-1.0.26.tgz#5051846ab711414aac60b67b39cf30de6223a5ec"
   dependencies:
     classnames "^2.2.5"
     enzyme "^2.9.1"
