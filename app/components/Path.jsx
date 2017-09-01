@@ -80,15 +80,6 @@ Paths.propTypes = {
 };
 
 styles = {
-  pathsWrapper: {
-    display: 'flex',
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    margin: 'auto',
-    width: '90%',
-    maxWidth: '1150px',
-  },
   addPathButton: {
     display: 'flex',
     flexDirection: 'row',

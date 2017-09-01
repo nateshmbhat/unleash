@@ -82,10 +82,12 @@ describe('Path Component', () => {
     expect(component).to.exist;
   });
 
-  it('should render the list of paths', () => {
+  it('should render the list of goals', () => {
     const component = getComponent();
-    const pathItems = component.find('.pathHeader');
-    expect(pathItems.length).to.equal(paths.list.length);
+    const pathItems = component.find('h3[className^="GoalCard"]');
+    forEach(paths.list, path => {
+      expect(component.findWhere(n => n.text() === path.name).length).to.be.above(0);
+    });
   });
 
   it('should render paths actions providing showActions true', () => {
@@ -103,13 +105,12 @@ describe('Path Component', () => {
     });
   });
 
-  it('should render the list of goals', () => {
+  it('should render the list of goal items', () => {
     const component = getComponent();
-    const goalsItems = component.find('GoalCard');
-    let goalsLength = 0;
     forEach(paths.list, path => {
-      goalsLength += path.goals.length;
+      forEach(path.goals, goal => {
+        expect(component.findWhere(n => n.text() === goal.name).length).to.be.above(0);
+      });
     });
-    expect(goalsItems.length).to.equal(goalsLength);
   });
 });
