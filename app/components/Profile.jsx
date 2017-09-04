@@ -112,7 +112,7 @@ class Profile extends Component {
 
     return (
       <Loading loading={isLoading}>
-        <div>
+        <div style={styles.wrapper}>
           <div style={styles.userWrapper}>
             <UserCard user={profiles.profile} router={this.props.router} key={userId} />
             <Tempo paths={paths} />
@@ -181,6 +181,9 @@ Profile.propTypes = {
 export default Profile;
 
 styles = {
+  wrapper: {
+    padding: '100px 0 0 0',
+  },
   skill: {
     position: 'relative',
     display: 'flex',
