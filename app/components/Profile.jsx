@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import Paper from 'material-ui/Paper';
 import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
-import { routerShape } from 'react-router/lib/PropTypes';
 import ContentPaste from 'material-ui/svg-icons/content/content-paste';
+import { Avatar, Header, Paragraph, Tags, Tag,
+  SocialIcons, SocialIcon, Link } from 'unleash-styles';
 import Path from './Path';
-import UserCard from './UserCard';
 import AddGoalsModal from './AddGoalsModal';
 import AddExistingGoalsModal from './AddExistingGoalsModal';
 import Loading from './Loading';
-import Tempo from './Tempo';
 
 let styles = {};
 
@@ -78,10 +76,6 @@ class Profile extends Component {
 
     const userId = params.userId;
     const editable = loggedInUser.isAdmin || loggedInUser.id === userId;
-    const skills = [
-      { name: 'mongoDB', id: 'c390be96-168b-4f42-a0cd-933fbc46e249' },
-      { name: 'React', id: 'c390be96-168b-4f42-a0cd-933fbc46e240' },
-    ];
     let addGoalButton = null;
     if (editable) {
       addGoalButton = (
@@ -113,16 +107,25 @@ class Profile extends Component {
     return (
       <Loading loading={isLoading}>
         <div style={styles.wrapper}>
-          <div style={styles.userWrapper}>
-            <UserCard user={profiles.profile} router={this.props.router} key={userId} />
-            <Tempo paths={paths} />
-          </div>
-          <div style={styles.skillsWrapper}>
-            {skills.map(skill => (
-              <Paper key={skill.id} style={styles.skill} zDepth={2} circle >
-                <span style={styles.skillTitle}>{skill.name}</span>
-              </Paper>
-            ))}
+          <div className="x-profile">
+            <Avatar imgSrc="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" />
+            <div className="x-profile-info">
+              <Header text="Lorem Ipsum" />
+              <Paragraph text="Lorem Ipsum" />
+              <Tags>
+                <Tag href="http://google.com" text="one" />
+                <Tag href="http://google.com" text="two" />
+                <Tag href="http://google.com" text="three" />
+              </Tags>
+              <Link href="http://google.com" text="Google" />
+              <SocialIcons>
+                <SocialIcon type="facebook" href="http://google.com" />
+                <SocialIcon type="instagram" href="http://google.com" />
+                <SocialIcon type="linkedin" href="http://google.com" />
+                <SocialIcon type="pinterest" href="http://google.com" />
+                <SocialIcon type="twitter" href="http://google.com" />
+              </SocialIcons>
+            </div>
           </div>
           <Path
             actions={actions}
@@ -142,7 +145,6 @@ Profile.propTypes = {
     fetchProfile: React.PropTypes.func.isRequired,
     pathsList: React.PropTypes.func.isRequired,
   }).isRequired,
-  router: routerShape.isRequired,
   params: React.PropTypes.shape({
     userId: React.PropTypes.string,
   }).isRequired,
