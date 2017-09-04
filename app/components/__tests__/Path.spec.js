@@ -7,7 +7,6 @@ import forEach from 'lodash/forEach';
 import sinon from 'sinon';
 import generate from '../../testUtils/fixtures';
 import Paths from '../Path';
-import PathHeader from '../PathHeader';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 describe('Path Component', () => {
@@ -87,21 +86,6 @@ describe('Path Component', () => {
     const pathItems = component.find('h3[className^="GoalCard"]');
     forEach(paths.list, path => {
       expect(component.findWhere(n => n.text() === path.name).length).to.be.above(0);
-    });
-  });
-
-  it('should render paths actions providing showActions true', () => {
-    editable = true;
-    const component = getComponent();
-    component.find(PathHeader).forEach((pathHeader) => {
-      expect(pathHeader.prop('showActions')).to.be.true;
-    });
-  });
-
-  it('should not render paths actions providing showActions false', () => {
-    const component = getComponent();
-    component.find(PathHeader).forEach((pathHeader) => {
-      expect(pathHeader.prop('showActions')).to.be.false;
     });
   });
 
