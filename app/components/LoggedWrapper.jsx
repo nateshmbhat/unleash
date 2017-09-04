@@ -4,9 +4,7 @@ import Menu from '../containers/Menu';
 const LoggedWrapper = ({ children }) => (
   <div>
     <Menu />
-    <div>
-      {children}
-    </div>
+    {children}
   </div>
 );
 

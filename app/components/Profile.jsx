@@ -107,26 +107,28 @@ class Profile extends Component {
     return (
       <Loading loading={isLoading}>
         <div style={styles.wrapper}>
-          <div className="x-profile">
-            <Avatar imgSrc="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" />
-            <div className="x-profile-info">
-              <Header text="Lorem Ipsum" />
-              <Paragraph text="Lorem Ipsum" />
-              <Tags>
-                <Tag href="http://google.com" text="one" />
-                <Tag href="http://google.com" text="two" />
-                <Tag href="http://google.com" text="three" />
-              </Tags>
-              <Link href="http://google.com" text="Google" />
-              <SocialIcons>
-                <SocialIcon type="facebook" href="http://google.com" />
-                <SocialIcon type="instagram" href="http://google.com" />
-                <SocialIcon type="linkedin" href="http://google.com" />
-                <SocialIcon type="pinterest" href="http://google.com" />
-                <SocialIcon type="twitter" href="http://google.com" />
-              </SocialIcons>
+          <section style={styles.profileRecap}>
+            <div style={styles.profile}>
+              <Avatar imgSrc={profiles.profile.picture} />
+              <div style={styles.profileInfo}>
+                <Header text={profiles.profile.fullName} />
+                <Paragraph text={profiles.profile.username} />
+                <Tags>
+                  <Tag href="http://google.com" text="React" />
+                  <Tag href="http://google.com" text="AWS" />
+                  <Tag href="http://google.com" text="Docker" />
+                </Tags>
+                <Link href="http://google.com" text="http://google.com" />
+                <SocialIcons>
+                  <SocialIcon type="facebook" href="http://google.com" />
+                  <SocialIcon type="instagram" href="http://google.com" />
+                  <SocialIcon type="linkedin" href="http://google.com" />
+                  <SocialIcon type="pinterest" href="http://google.com" />
+                  <SocialIcon type="twitter" href="http://google.com" />
+                </SocialIcons>
+              </div>
             </div>
-          </div>
+          </section>
           <Path
             actions={actions}
             paths={paths}
@@ -183,7 +185,21 @@ Profile.propTypes = {
 export default Profile;
 
 styles = {
+  profileRecap: {
+    position: 'relative',
+    display: 'flex',
+    margin: '26px 0 36px',
+  },
+  profile: {
+    position: 'relative',
+    display: 'flex',
+  },
+  profileInfo: {
+    position: 'relative',
+    overflow: 'hidden',
+  },
   wrapper: {
+    maxWidth: '1180px',
     padding: '100px 0 0 0',
   },
   skill: {
